@@ -3,39 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>موقعي</title>
+<title>مساحة ✨ | مجتمعك الصغير</title>
 <style>
-:root{--bg:#f3f4f9;--card:#fff;--text:#1d1f2b;--muted:#6b7080;--p:#6c5ce7;--p2:#00b4d8;--bd:#e6e8f0;--ok:#1e9e6a;--no:#e5484d}
+:root{--bg:#f3f5ff;--card:#fff;--text:#1d1f2b;--muted:#6b7080;--p:#6c5ce7;--p2:#00b4d8;--bd:#e6e8f0;--ok:#16875d;--no:#e5484d;--shadow:0 8px 24px #5145cd12}
 [data-theme=dark]{--bg:#12131a;--card:#1c1e29;--text:#e8e9f0;--muted:#9a9db0;--bd:#2c2f3d}
 *{box-sizing:border-box}
-body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--text);margin:0}
+body{font-family:system-ui,sans-serif;background:radial-gradient(ellipse at top right,#e9e7ff 0,transparent 36%),var(--bg);color:var(--text);margin:0;min-height:100vh} [data-theme=dark] body{background:var(--bg)}
 header{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5;box-shadow:0 2px 10px #0003}
 header b{font-size:20px} header .r{display:flex;gap:8px;align-items:center;font-size:14px}
-main{max-width:620px;margin:14px auto;padding:0 12px 40px}
-.card{background:var(--card);border-radius:16px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px #0000000d;border:1px solid var(--bd)}
-button{background:var(--p);color:#fff;border:0;border-radius:10px;padding:9px 16px;font-size:15px;cursor:pointer;font-family:inherit}
+main{max-width:760px;margin:22px auto;padding:0 14px 48px}
+.card{background:var(--card);border-radius:20px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow);border:1px solid var(--bd)}
+button{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;border:0;border-radius:12px;padding:10px 16px;font-size:14px;font-weight:650;cursor:pointer;font-family:inherit;transition:transform .15s,filter .15s}button:hover{filter:brightness(1.04);transform:translateY(-1px)}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #00b4d866;outline-offset:2px}
 button.g{background:#ffffff33;padding:6px 12px} button.ok{background:var(--ok)} button.no{background:var(--no)}
-textarea,input[type=text]{width:100%;padding:11px;font-size:16px;border:1px solid var(--bd);border-radius:12px;font-family:inherit;background:var(--bg);color:var(--text)}
-nav{display:flex;gap:8px;margin-bottom:12px}
-nav button{flex:1;background:var(--card);color:var(--muted);border:1px solid var(--bd)}
+textarea,input[type=text],input[type=search]{width:100%;padding:12px;font-size:15px;border:1px solid var(--bd);border-radius:13px;font-family:inherit;background:var(--bg);color:var(--text)} textarea{resize:vertical}
+nav{display:flex;gap:8px;margin-bottom:14px;overflow-x:auto;padding:2px 1px 6px}
+nav button{flex:1;min-width:max-content;background:var(--card);color:var(--muted);border:1px solid var(--bd)}
 nav button.on{background:var(--p);color:#fff;border-color:var(--p)}
 .top{display:flex;gap:10px;align-items:center}
-.av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px}
+.av{width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px;object-fit:cover;border:2px solid #fff;box-shadow:0 2px 8px #0002}.profile-head{display:flex;gap:12px;align-items:center}.profile-head .av{width:64px;height:64px;flex-basis:64px;font-size:24px}.search-results{display:grid;gap:8px}.user-result{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;border:1px solid var(--bd);border-radius:14px}.user-result .top{min-width:0}.muted{color:var(--muted)}.section-title{margin:4px 0 12px;font-size:17px}.pill{display:inline-block;background:#eeecff;color:#5545c7;border-radius:999px;padding:4px 9px;font-size:12px}.profile-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .name{font-weight:bold} .time{color:var(--muted);font-size:12px}
 .text{margin:10px 0;white-space:pre-wrap;line-height:1.6}
-.pimg{width:100%;max-height:420px;object-fit:cover;border-radius:12px;margin-top:4px}
+.pimg{width:100%;max-height:480px;object-fit:cover;border-radius:15px;margin-top:4px;background:var(--bg)}
 .bar{display:flex;gap:8px;margin-top:10px;border-top:1px solid var(--bd);padding-top:10px}
 .act{background:var(--bg);color:var(--text);padding:7px 14px;border:1px solid var(--bd)} .act.on{color:var(--no);border-color:var(--no)}
 .cbox{margin-top:10px} .cm{background:var(--bg);padding:8px 12px;border-radius:12px;margin-bottom:6px;font-size:14px}
 .crow{display:flex;gap:8px} .crow input{flex:1}
 .badge{font-size:12px;padding:3px 10px;border-radius:10px;color:#fff} .pending{background:#e0a100}.approved{background:var(--ok)}.rejected{background:var(--no)}
-.hide{display:none} .rules{font-size:13px;color:var(--muted);margin:8px 0} .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hide{display:none!important} .rules{font-size:13px;color:var(--muted);margin:8px 0;line-height:1.6} .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap} .bar{flex-wrap:wrap} .act{font-weight:500} #status{white-space:pre-wrap} @media(max-width:520px){header{padding:11px 12px}header b{font-size:18px}main{margin:12px auto;padding:0 10px 32px}.card{padding:13px;border-radius:17px}nav{gap:6px}nav button{padding:9px 12px}}
 #preview{max-width:100%;max-height:200px;border-radius:12px;margin-top:8px}
 #status{color:var(--no)}
 </style>
 </head>
 <body>
-<header><b>موقعي ✨</b><div class="r"><span id="who"></span><button class="g" id="theme">🌙</button></div></header>
+<header><b>مساحة ✨</b><div class="r"><span id="who"></span><button class="g" id="theme">🌙</button></div></header>
 <main>
   <div id="status" class="card" style="display:none"></div>
 
@@ -55,11 +55,15 @@ nav button.on{background:var(--p);color:#fff;border-color:var(--p)}
 
   <div id="appView" class="hide">
     <nav>
-      <button id="tHome" class="on">الرئيسية</button>
+      <button id="tHome" class="on">🏠 الرئيسية</button>
+      <button id="tSearch">🔎 اكتشف</button>
+      <button id="tProfile">👤 ملفي</button>
+      <button id="tFavorites">⭐ المفضلة</button>
       <button id="tMine">بوستاتي</button>
       <button id="tAdmin" class="hide">المراجعة</button>
     </nav>
     <div id="homeView">
+      <div class="card"><h3 class="section-title">أهلًا بيك في مساحتك 👋</h3><p class="rules">شارك أفكارك، اكتشف أشخاصًا جددًا، واحفظ المنشورات اللي تعجبك.</p></div>
       <div class="card">
         <textarea id="postText" rows="3" maxlength="500" placeholder="اكتب بوست..."></textarea>
         <img id="preview" class="hide" alt="">
@@ -74,6 +78,9 @@ nav button.on{background:var(--p);color:#fff;border-color:var(--p)}
       </div>
       <div id="feed"></div>
     </div>
+    <div id="searchView" class="hide"><div class="card"><h3 class="section-title">اكتشف المجتمع</h3><input type="search" id="searchInput" placeholder="ابحث عن اسم أو بوست..." autocomplete="off"><div class="tools" style="margin-top:10px"><button id="searchPosts" class="act">المنشورات</button><button id="searchUsers" class="act">الأشخاص</button></div></div><div id="searchResults"></div></div>
+    <div id="profileView" class="hide"><div class="card"><h3 class="section-title">ملفي الشخصي</h3><div id="profileSummary" class="profile-head"></div><label class="rules" for="profileName">اسم العرض</label><input type="text" id="profileName" maxlength="20" placeholder="اسم العرض"><label class="rules" for="profileBio">نبذة عنك</label><textarea id="profileBio" rows="3" maxlength="160" placeholder="اكتب نبذة قصيرة عنك..."></textarea><label class="rules" for="avatarFile">الصورة الشخصية (اختياري)</label><input type="file" id="avatarFile" accept="image/*"><div class="profile-actions"><button id="saveProfile">حفظ الملف الشخصي</button><button id="cancelAvatar" class="act">إزالة الصورة</button></div><p id="profileMsg" class="rules"></p></div><div id="profilePosts"></div></div>
+    <div id="favoritesView" class="hide"><h3 class="section-title">⭐ المنشورات المحفوظة</h3><div id="favorites"></div></div>
     <div id="mineView" class="hide"><div id="mine"></div></div>
     <div id="adminView" class="hide"><div id="queue"></div></div>
   </div>
@@ -106,7 +113,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 const $ = id => document.getElementById(id);
 const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x !== undefined) e.textContent = x; return e; };
-let me = null, myName = "", isAdmin = false, imgData = "";
+let me = null, myName = "", isAdmin = false, imgData = "", myAvatar = "", myBio = "", searchMode = "posts";
 
 // الدارك مود
 const setTheme = t => { document.documentElement.dataset.theme = t; $("theme").textContent = t === "dark" ? "☀️" : "🌙"; try { localStorage.setItem("theme", t); } catch (e) {} };
@@ -114,33 +121,33 @@ let saved = null; try { saved = localStorage.getItem("theme"); } catch (e) {}
 setTheme(saved || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
 $("theme").onclick = () => setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
 
+const views = ["home", "search", "profile", "favorites", "mine", "admin"];
 const show = id => ["loginView", "nameView", "appView"].forEach(v => $(v).classList.toggle("hide", v !== id));
 const tab = t => {
-  ["home", "mine", "admin"].forEach(n => {
-    $(n + "View").classList.toggle("hide", n !== t);
-    $("t" + n[0].toUpperCase() + n.slice(1)).classList.toggle("on", n === t);
-  });
-  if (t === "home") loadFeed(); if (t === "mine") loadMine(); if (t === "admin") loadQueue();
+  views.forEach(n => { $(n + "View").classList.toggle("hide", n !== t); const b = $("t" + n[0].toUpperCase() + n.slice(1)); if (b) b.classList.toggle("on", n === t); });
+  if (t === "home") loadFeed(); if (t === "mine") loadMine(); if (t === "admin") loadQueue(); if (t === "profile") loadProfile(); if (t === "favorites") loadFavorites(); if (t === "search") runSearch();
 };
 $("loginBtn").onclick = () => signInWithPopup(auth, new GoogleAuthProvider()).catch(e => alert("مشكلة في الدخول: " + e.code));
-$("tHome").onclick = () => tab("home"); $("tMine").onclick = () => tab("mine"); $("tAdmin").onclick = () => tab("admin");
+$("tHome").onclick = () => tab("home"); $("tSearch").onclick = () => { searchMode = "posts"; tab("search"); }; $("tProfile").onclick = () => tab("profile"); $("tFavorites").onclick = () => tab("favorites"); $("tMine").onclick = () => tab("mine"); $("tAdmin").onclick = () => tab("admin");
 
 onAuthStateChanged(auth, async user => {
   me = user;
   if (!user) { $("who").replaceChildren(); show("loginView"); return; }
   isAdmin = user.email === ADMIN_EMAIL;
-  const snap = await getDoc(doc(db, "users", user.uid));
-  if (!snap.exists()) { show("nameView"); return; }
-  myName = snap.data().name; start();
+  try { const snap = await getDoc(doc(db, "users", user.uid));
+    if (!snap.exists()) { show("nameView"); return; }
+    myName = snap.data().name || "مستخدم"; myAvatar = snap.data().avatar || ""; myBio = snap.data().bio || ""; start();
+  } catch(e) { showErr("تعذر تحميل بيانات حسابك. راجع قواعد Firestore واتصال الإنترنت."); }
 });
 $("nameBtn").onclick = async () => {
   const n = $("nameInput").value.trim();
   if (n.length < 2) { $("msg").textContent = "الاسم قصير"; return; }
-  await setDoc(doc(db, "users", me.uid), { name: n }); myName = n; start();
+  await setDoc(doc(db, "users", me.uid), { name: n, bio: "", avatar: "", updatedAt: serverTimestamp() }); myName = n; myBio = ""; myAvatar = ""; start();
 };
+function avatarNode(name, avatar) { if (avatar && avatar.startsWith("data:image/")) { const i = el("img", "av"); i.src = avatar; i.alt = "الصورة الشخصية لـ " + (name || "مستخدم"); return i; } return el("div", "av", (name || "?").trim()[0] || "؟"); }
 function start() {
   const b = el("button", "g", "خروج"); b.onclick = () => signOut(auth);
-  $("who").replaceChildren(myName + " ", b);
+  const av = avatarNode(myName, myAvatar); av.style.width="28px"; av.style.height="28px"; av.style.flexBasis="28px"; $("who").replaceChildren(av, document.createTextNode(myName + " "), b);
   $("tAdmin").classList.toggle("hide", !isAdmin);
   show("appView"); tab("home");
 }
@@ -172,7 +179,7 @@ $("rmImg").onclick = () => { imgData = ""; $("imgFile").value = ""; $("preview")
 $("postBtn").onclick = async () => {
   const text = $("postText").value.trim();
   if (!text && !imgData) return;
-  const data = { text, uid: me.uid, authorName: myName, status: "pending", createdAt: serverTimestamp() };
+  const data = { text, uid: me.uid, authorName: myName, authorAvatar: myAvatar, status: "pending", createdAt: serverTimestamp() };
   if (imgData) data.image = imgData;
   await addDoc(collection(db, "posts"), data);
   $("postText").value = ""; $("rmImg").click();
@@ -188,16 +195,21 @@ const empty = t => el("p", "time", t);
 
 function postCard(p) {
   const d = el("div", "card"), top = el("div", "top"), meta = el("div");
-  meta.append(el("div", "name", p.authorName), el("div", "time", when(p)));
-  top.append(el("div", "av", (p.authorName || "?")[0]), meta); d.append(top);
+  const author = el("button", "act", p.authorName || "مستخدم"); author.onclick = () => openUserProfile(p.uid);
+  meta.append(el("div", "name", author), el("div", "time", when(p)));
+  top.append(avatarNode(p.authorName, p.authorAvatar || ""), meta); d.append(top);
   if (p.text) d.append(el("div", "text", p.text));
-  if (p.image && p.image.startsWith("data:image/")) { const i = el("img", "pimg"); i.src = p.image; d.append(i); }
+  if (p.image && p.image.startsWith("data:image/")) { const i = el("img", "pimg"); i.src = p.image; i.alt = "صورة مرفقة بالمنشور"; i.loading = "lazy"; d.append(i); }
   return d;
 }
 
 function addActions(d, p) {
-  const bar = el("div", "bar"), lk = el("button", "act", "🤍 0"), cm = el("button", "act", "💬 تعليق");
-  bar.append(lk, cm);
+  const bar = el("div", "bar"), lk = el("button", "act", "🤍 0"), cm = el("button", "act", "💬 تعليق"), fav = el("button", "act", "☆ حفظ");
+  bar.append(lk, cm, fav);
+  const favRef = doc(db, "favorites", me.uid + "_" + p.id);
+  getDoc(favRef).then(s => { if (s.exists()) { fav.textContent = "⭐ محفوظ"; fav.classList.add("on"); } }).catch(() => {});
+  fav.onclick = async () => { try { const s = await getDoc(favRef); if (s.exists()) { await deleteDoc(favRef); fav.textContent = "☆ حفظ"; fav.classList.remove("on"); } else { await setDoc(favRef, { uid: me.uid, postId: p.id, createdAt: serverTimestamp() }); fav.textContent = "⭐ محفوظ"; fav.classList.add("on"); } } catch(e) { showErr("تعذر تحديث المفضلة. راجع قواعد Firestore."); } };
+  if (p.uid && p.uid !== me.uid) { const follow = el("button", "act", "＋ متابعة"); const fr = doc(db, "follows", me.uid + "_" + p.uid); getDoc(fr).then(s => { if (s.exists()) { follow.textContent = "✓ تتابعه"; follow.classList.add("on"); } }).catch(()=>{}); follow.onclick = async () => { try { const s = await getDoc(fr); if (s.exists()) { await deleteDoc(fr); follow.textContent = "＋ متابعة"; follow.classList.remove("on"); } else { await setDoc(fr, { followerUid: me.uid, followingUid: p.uid, createdAt: serverTimestamp() }); follow.textContent = "✓ تتابعه"; follow.classList.add("on"); } } catch(e) { showErr("تعذر تحديث المتابعة. راجع قواعد Firestore."); } }; bar.append(follow); }
   if (isAdmin) { const del = el("button", "act", "🗑"); del.onclick = async () => { if (confirm("حذف البوست؟")) { await deleteDoc(doc(db, "posts", p.id)); loadFeed(); } }; bar.append(del); }
   const box = el("div", "cbox hide"); d.append(bar, box);
   let liked = false, count = 0;
@@ -226,13 +238,29 @@ async function loadComments(p, box) {
 }
 
 async function loadFeed() {
-  const list = await getList(query(collection(db, "posts"), where("status", "==", "approved")));
-  $("feed").replaceChildren(...(list.length ? list.map(p => { const c = postCard(p); addActions(c, p); return c; }) : [empty("مفيش بوستات لسه.")]));
+  try { const list = await getList(query(collection(db, "posts"), where("status", "==", "approved")));
+    $("feed").replaceChildren(...(list.length ? list.map(p => { const c = postCard(p); addActions(c, p); return c; }) : [empty("مفيش بوستات لسه.")]));
+  } catch(e) { showErr("تعذر تحميل المنشورات. تأكد من اتصالك وقواعد Firestore."); }
 }
 async function loadMine() {
   const list = await getList(query(collection(db, "posts"), where("uid", "==", me.uid)));
   $("mine").replaceChildren(...(list.length ? list.map(p => { const c = postCard(p); c.append(el("span", "badge " + p.status, label[p.status])); return c; }) : [empty("لسه ماكتبتش بوستات.")]));
 }
+async function loadProfile() {
+  $("profileName").value = myName; $("profileBio").value = myBio;
+  paintProfileSummary(myName, myAvatar, myBio);
+  try { const list = await getList(query(collection(db, "posts"), where("uid", "==", me.uid))); $("profilePosts").replaceChildren(el("h3", "section-title", "منشوراتي"), ...(list.filter(p=>p.status === "approved").map(p=>postCard(p)))); }
+  catch(e) { $("profilePosts").replaceChildren(empty("تعذر تحميل المنشورات الشخصية.")); }
+}
+function paintProfileSummary(name, avatar, bio) { const h = el("div", "profile-head"); h.append(avatarNode(name, avatar)); const m=el("div"); m.append(el("div","name",name || "مستخدم"),el("div","muted",bio || "أضف نبذة قصيرة عنك")); h.append(m); $("profileSummary").replaceChildren(h); }
+$("avatarFile").onchange = async e => { const f=e.target.files[0]; if(!f)return; if(!f.type.startsWith("image/")){showErr("اختار ملف صورة صالحًا.");return;} if(f.size>5*1024*1024){showErr("حجم الصورة قبل الضغط يجب أن يكون أقل من 5 ميجابايت.");return;} try { myAvatar=await shrink(f); paintProfileSummary(myName,myAvatar,myBio); } catch(err){showErr(err.message);} };
+$("cancelAvatar").onclick = () => { myAvatar=""; $("avatarFile").value=""; paintProfileSummary(myName,myAvatar,myBio); };
+$("saveProfile").onclick = async () => { const name=$("profileName").value.trim(), bio=$("profileBio").value.trim(); if(name.length<2){$("profileMsg").textContent="الاسم لازم يكون حرفين على الأقل.";return;} try { await updateDoc(doc(db,"users",me.uid),{name,bio,avatar:myAvatar,updatedAt:serverTimestamp()}); myName=name;myBio=bio; $("profileMsg").textContent="تم حفظ الملف الشخصي بنجاح."; start(); tab("profile"); } catch(e){$("profileMsg").textContent="تعذر الحفظ. راجع اتصالك وقواعد Firestore.";} };
+async function openUserProfile(uid) { if(!uid)return; searchMode="profile"; if(uid===me.uid){tab("profile");return;} try { const s=await getDoc(doc(db,"users",uid)); if(!s.exists()){showErr("الملف الشخصي غير متاح.");return;} const u=s.data(); const wrap=el("div","card"); const head=el("div","profile-head"); head.append(avatarNode(u.name,u.avatar)); const m=el("div");m.append(el("div","name",u.name||"مستخدم"),el("div","muted",u.bio||"لا توجد نبذة بعد"));head.append(m);wrap.append(head); const follow=el("button","","＋ متابعة");const fr=doc(db,"follows",me.uid+"_"+uid); const fs=await getDoc(fr); if(fs.exists()){follow.textContent="✓ تتابعه";follow.classList.add("act");} follow.onclick=async()=>{try{const x=await getDoc(fr);if(x.exists()){await deleteDoc(fr);follow.textContent="＋ متابعة";}else{await setDoc(fr,{followerUid:me.uid,followingUid:uid,createdAt:serverTimestamp()});follow.textContent="✓ تتابعه";}}catch(e){showErr("تعذر تحديث المتابعة.");}};wrap.append(follow);const ps=await getList(query(collection(db,"posts"),where("uid","==",uid),where("status","==","approved")));tab("search");$("searchResults").replaceChildren(wrap,...ps.map(p=>postCard(p)));}catch(e){showErr("تعذر فتح الملف الشخصي.");} }
+$("searchPosts").onclick=()=>{searchMode="posts";runSearch();}; $("searchUsers").onclick=()=>{searchMode="users";runSearch();}; $("searchInput").addEventListener("input",()=>runSearch());
+async function runSearch(){if(searchMode==="profile")return;const out=$("searchResults");if(!out)return;const term=($("searchInput").value||"").trim().toLocaleLowerCase("ar");out.replaceChildren(empty("جاري البحث..."));try{if(searchMode==="users"){const snap=await getDocs(collection(db,"users"));const users=snap.docs.map(d=>({uid:d.id,...d.data()})).filter(u=>(u.name||"").toLocaleLowerCase("ar").includes(term));out.replaceChildren(...(users.length?users.map(u=>{const r=el("div","card user-result"),left=el("div","top"),meta=el("div");left.append(avatarNode(u.name,u.avatar));meta.append(el("div","name",u.name||"مستخدم"),el("div","muted",u.bio||""));left.append(meta);const b=el("button","act","عرض الملف");b.onclick=()=>openUserProfile(u.uid);r.append(left,b);return r;}):[empty("مفيش أشخاص مطابقين للبحث.") ]));}else{const posts=await getList(query(collection(db,"posts"),where("status","==","approved")));const found=posts.filter(p=>(p.text||"").toLocaleLowerCase("ar").includes(term)||(p.authorName||"").toLocaleLowerCase("ar").includes(term));out.replaceChildren(...(found.length?found.map(p=>{const c=postCard(p);addActions(c,p);return c;}):[empty("مفيش منشورات مطابقة للبحث.")]));}}catch(e){out.replaceChildren(empty("تعذر البحث. تأكد من قواعد Firestore."));}}
+async function loadFavorites(){const out=$("favorites");out.replaceChildren(empty("جاري تحميل المفضلة..."));try{const fs=await getDocs(query(collection(db,"favorites"),where("uid","==",me.uid)));const ids=fs.docs.map(d=>d.data().postId).filter(Boolean);const posts=await Promise.all(ids.map(async id=>{const s=await getDoc(doc(db,"posts",id));return s.exists()?{id:s.id,...s.data()}:null;}));const visible=posts.filter(p=>p&&p.status==="approved");out.replaceChildren(...(visible.length?visible.map(p=>{const c=postCard(p);addActions(c,p);return c;}):[empty("لسه ما حفظتش منشورات. اضغط ☆ حفظ على أي منشور.")]));}catch(e){out.replaceChildren(empty("تعذر تحميل المفضلة. راجع قواعد Firestore."));}}
+
 async function loadQueue() {
   const ps = await getList(query(collection(db, "posts"), where("status", "==", "pending")));
   const cs = await getList(query(collection(db, "comments"), where("status", "==", "pending")));
