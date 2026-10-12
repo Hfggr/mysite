@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>موقعي</title>
+<style>
+  body{font-family:system-ui,sans-serif;background:#f0f2f5;margin:0;color:#1c1e21}
+  header{background:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 1px 3px #0002;position:sticky;top:0}
+  main{max-width:600px;margin:16px auto;padding:0 12px}
+  .card{background:#fff;border-radius:10px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px #0002}
+  button{background:#1877f2;color:#fff;border:0;border-radius:8px;padding:9px 16px;font-size:15px;cursor:pointer}
+  button.red{background:#d93025} button.green{background:#188038} button.gray{background:#65676b}
+  textarea,input[type=text]{width:100%;box-sizing:border-box;padding:10px;font-size:16px;border:1px solid #ccd0d5;border-radius:8px;font-family:inherit}
+  .name{font-weight:bold} .time{color:#65676b;font-size:12px} .text{margin:8px 0;white-space:pre-wrap}
+  .badge{font-size:12px;padding:2px 8px;border-radius:10px}
+  .pending{background:#fff3cd} .approved{background:#d4edda} .rejected{background:#f8d7da}
+  nav{display:flex;gap:8px;margin-bottom:12px} nav button{flex:1;background:#e4e6eb;color:#1c1e21}
+  nav button.on{background:#1877f2;color:#fff}
+  .hide{display:none} #msg{color:#d93025;margin:6px 0}
+</style>
+</head>
+<body>
+<header><b>موقعي</b><span id="who"></span></header>
+<main>
+
+  <!-- شاشة الدخول -->
+  <div id="status" class="card" style="color:#d93025;display:none"></div>
+  <div id="loginView" class="card" style="text-align:center">
+    <h3>أهلًا بيك 👋</h3>
+    <p>كل البوستات بتتراجع قبل ما تظهر، عشان الموقع يبقى آمن للكل.</p>
+    <button id="loginBtn">سجّل دخول بجوجل</button>
+  </div>
+
+  <!-- اختيار اسم العرض -->
+  <div id="nameView" class="card hide">
+    <h3>اختار اسم العرض</h3>
+    <p>ده الاسم اللي هيظهر للناس (مش اسمك الحقيقي لازم).</p>
+    <input type="text" id="nameInput" maxlength="20" placeholder="مثلًا: نجم الصحرا">
+    <p id="msg"></p>
+    <button id="nameBtn">حفظ</button>
+  </div>
+
+  <!-- التطبيق -->
+  <div id="appView" class="hide">
+    <nav>
+      <button id="tHome" class="on">الرئيسية</button>
+      <button id="tMine">بوستاتي</button>
+      <button id="tAdmin" class="hide">المراجعة</button>
+    </nav>
+
+    <div id="homeView">
+      <div class="card">
+        <textarea id="postText" rows="3" maxlength="500" placeholder="اكتب بوست..."></textarea>
+        <p style="font-size:13px;color:#65676b">القواعد: ممنوع الشتايم والألفاظ الخارجة وأي محتوى غير لائق. البوست بيظهر بعد المراجعة.</p>
+        <button id="postBtn">نشر (للمراجعة)</button>
+        <span id="postMsg"></span>
+      </div>
+      <div id="feed"></div>
+    </div>
+
+    <div id="mineView" class="hide"><div id="mine"></div></div>
+    <div id="adminView" class="hide"><div id="queue"></div></div>
+  </div>
+</main>
+
+<script>
+  function showErr(m){var s=document.getElementById("status");s.style.display="block";s.textContent=m;}
+  window.addEventListener("error",function(e){showErr("خطأ: "+e.message);});
+  window.addEventListener("unhandledrejection",function(e){showErr("خطأ: "+(e.reason&&e.reason.message||e.reason));});
+  setTimeout(function(){ if(!window.__loaded) showErr("الموقع مش قادر يحمّل Firebase. تأكد إنك فاتح الرابط من النت (مش الملف من الجهاز) وإن النت شغال."); },5000);
+</script>
+<script type="module">
+window.__loaded = true;
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { getFirestore, collection, addDoc, doc, getDoc, setDoc, updateDoc, deleteDoc, query, where, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAbM5PTvjYT5s4m3r9Vezue8a3H1Rd8ERk",
+  authDomain: "my-social-app-94baa.firebaseapp.com",
+  projectId: "my-social-app-94baa",
+  storageBucket: "my-social-app-94baa.firebasestorage.app",
+  messagingSenderId: "1046859842661",
+  appId: "1:1046859842661:web:2519eaf2363d66d6f2328c"
+};
+
+// ⚠️ غيّر ده لإيميل جوجل بتاعك (المشرف)
+const ADMIN_EMAIL = "hytmasamh56@gmail.com";
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const $ = id => document.getElementById(id);
+let me = null, myName = "", isAdmin = false;
+
+const show = id => ["loginView","nameView","appView"].forEach(v => $(v).classList.toggle("hide", v !== id));
+const tab = t => {
+  ["home","mine","admin"].forEach(n => {
+    $(n+"View").classList.toggle("hide", n !== t);
+    $("t"+n[0].toUpperCase()+n.slice(1)).classList.toggle("on", n === t);
+  });
+  if (t === "home") loadFeed(); if (t === "mine") loadMine(); if (t === "admin") loadQueue();
+};
+
+$("loginBtn").onclick = () => signInWithPopup(auth, new GoogleAuthProvider()).catch(e => alert("مشكلة في الدخول: " + e.code));
+$("tHome").onclick = () => tab("home");
+$("tMine").onclick = () => tab("mine");
+$("tAdmin").onclick = () => tab("admin");
+
+onAuthStateChanged(auth, async user => {
+  me = user;
+  if (!user) { $("who").innerHTML = ""; show("loginView"); return; }
+  isAdmin = user.email === ADMIN_EMAIL;
+  const snap = await getDoc(doc(db, "users", user.uid));
+  if (!snap.exists()) { show("nameView"); return; }
+  myName = snap.data().name;
+  start();
+});
+
+$("nameBtn").onclick = async () => {
+  const n = $("nameInput").value.trim();
+  if (n.length < 2) { $("msg").textContent = "الاسم قصير"; return; }
+  await setDoc(doc(db, "users", me.uid), { name: n });
+  myName = n; start();
+};
+
+function start() {
+  $("who").innerHTML = "";
+  const b = document.createElement("button");
+  b.textContent = "خروج"; b.className = "gray"; b.onclick = () => signOut(auth);
+  $("who").append(myName + " ", b);
+  $("tAdmin").classList.toggle("hide", !isAdmin);
+  show("appView"); tab("home");
+}
+
+$("postBtn").onclick = async () => {
+  const text = $("postText").value.trim();
+  if (!text) return;
+  await addDoc(collection(db, "posts"), {
+    text, uid: me.uid, authorName: myName, status: "pending", createdAt: serverTimestamp()
+  });
+  $("postText").value = "";
+  $("postMsg").textContent = " ✅ بوستك في انتظار المراجعة";
+  setTimeout(() => $("postMsg").textContent = "", 4000);
+};
+
+const when = p => p.createdAt ? p.createdAt.toDate().toLocaleString("ar-EG") : "";
+const sortNew = arr => arr.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+const label = { pending: "في الانتظار", approved: "اتقبل", rejected: "اترفض" };
+
+function card(p, buttons) {
+  const d = document.createElement("div"); d.className = "card";
+  const n = document.createElement("div"); n.className = "name"; n.textContent = p.authorName;
+  const t = document.createElement("div"); t.className = "time"; t.textContent = when(p);
+  const x = document.createElement("div"); x.className = "text"; x.textContent = p.text;
+  d.append(n, t, x);
+  if (buttons) d.append(...buttons);
+  return d;
+}
+
+async function getPosts(q) {
+  const s = await getDocs(q);
+  return sortNew(s.docs.map(d => ({ id: d.id, ...d.data() })));
+}
+
+async function loadFeed() {
+  const list = await getPosts(query(collection(db, "posts"), where("status", "==", "approved")));
+  $("feed").replaceChildren(...(list.length ? list.map(p => card(p)) : [Object.assign(document.createElement("p"), { textContent: "مفيش بوستات لسه." })]));
+}
+
+async function loadMine() {
+  const list = await getPosts(query(collection(db, "posts"), where("uid", "==", me.uid)));
+  $("mine").replaceChildren(...list.map(p => {
+    const s = document.createElement("span"); s.className = "badge " + p.status; s.textContent = label[p.status];
+    return card(p, [s]);
+  }));
+}
+
+async function loadQueue() {
+  const list = await getPosts(query(collection(db, "posts"), where("status", "==", "pending")));
+  if (!list.length) { $("queue").replaceChildren(Object.assign(document.createElement("p"), { textContent: "مفيش بوستات منتظرة ✨" })); return; }
+  $("queue").replaceChildren(...list.map(p => {
+    const ok = document.createElement("button"); ok.textContent = "✅ وافق"; ok.className = "green";
+    const no = document.createElement("button"); no.textContent = "❌ ارفض"; no.className = "red"; no.style.marginRight = "8px";
+    ok.onclick = async () => { await updateDoc(doc(db, "posts", p.id), { status: "approved" }); loadQueue(); };
+    no.onclick = async () => { await updateDoc(doc(db, "posts", p.id), { status: "rejected" }); loadQueue(); };
+    return card(p, [ok, no]);
+  }));
+}
+</script>
+</body>
+</html>
