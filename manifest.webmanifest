@@ -1,0 +1,36 @@
+{
+  "id": "./",
+  "name": "المجتمع الروحي ✝️",
+  "short_name": "المجتمع الروحي",
+  "description": "مجتمع مسيحي عربي للأسئلة الروحية والتأمل وطلبات الصلاة والمشاركة بمحبة واحترام.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#f4f6fa",
+  "theme_color": "#122b4a",
+  "categories": [
+    "social",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
