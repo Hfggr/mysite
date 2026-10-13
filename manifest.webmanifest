@@ -13,8 +13,8 @@
     "minimal-ui"
   ],
   "orientation": "any",
-  "background_color": "#f4f6fa",
-  "theme_color": "#153b60",
+  "background_color": "#f5f4ef",
+  "theme_color": "#183f37",
   "categories": [
     "social",
     "lifestyle"
