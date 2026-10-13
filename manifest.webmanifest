@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "المجتمع الروحي ✝️",
+  "name": "المجتمع الروحي",
   "short_name": "المجتمع الروحي",
-  "description": "مجتمع مسيحي عربي للأسئلة الروحية والتأمل وطلبات الصلاة والمشاركة بمحبة واحترام.",
+  "description": "مجتمع مسيحي عربي للنشر والتفاعل، والتأملات الروحية وطلبات الصلاة والمشاركة بمحبة واحترام.",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "./",
@@ -13,8 +13,8 @@
     "minimal-ui"
   ],
   "orientation": "any",
-  "background_color": "#f4f7f4",
-  "theme_color": "#1d5145",
+  "background_color": "#f7f3ee",
+  "theme_color": "#493653",
   "categories": [
     "social",
     "lifestyle"

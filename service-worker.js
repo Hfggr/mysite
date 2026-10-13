@@ -1,6 +1,6 @@
 const CACHE_PREFIX = 'almojtama-alrouhi-pwa-';
-const CACHE_NAME = `${CACHE_PREFIX}v9`;
-const APP_SHELL = ['./index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
+const CACHE_NAME = `${CACHE_PREFIX}v12`;
+const APP_SHELL = ['./index.html', './manifest.webmanifest', './brand.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
@@ -48,7 +48,7 @@ self.addEventListener('fetch', event => {
     if (cached) return cached;
     try {
       const response = await fetch(request);
-      if (response && response.ok && /\/(manifest\.webmanifest|icon-(192|512)\.png)$/.test(url.pathname)) {
+      if (response && response.ok && /\/(manifest\.webmanifest|brand\.svg|icon-(192|512)\.png)$/.test(url.pathname)) {
         const cache = await caches.open(CACHE_NAME);
         await cache.put(request, response.clone());
       }

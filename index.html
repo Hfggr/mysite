@@ -4,10 +4,10 @@
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%2312294a%27/%3E%3Cpath d=%27M29 10h6v16h15v6H35v23h-6V32H14v-6h15z%27 fill=%27%23d8ae55%27/%3E%3C/svg%3E"/>
-<meta content="#1d5145" name="theme-color"/><meta content="المجتمع الروحي: مجتمع مسيحي عربي للمحبة والأسئلة الروحية والتأملات وطلبات الصلاة والمشاركة باحترام." name="description"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="المجتمع الروحي"/><link rel="manifest" href="./manifest.webmanifest"/><link rel="apple-touch-icon" href="./icon-192.png"/>
+<link rel="icon" type="image/svg+xml" href="./brand.svg"/>
+<meta content="#493653" name="theme-color"/><meta content="المجتمع الروحي: مجتمع مسيحي عربي للمحبة والأسئلة الروحية والتأملات وطلبات الصلاة والمشاركة باحترام." name="description"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="apple-mobile-web-app-title" content="المجتمع الروحي"/><link rel="manifest" href="./manifest.webmanifest"/><link rel="apple-touch-icon" href="./icon-192.png"/>
 
-<title>المجتمع الروحي ✝️ | معًا في المحبة والخدمة</title>
+<title>المجتمع الروحي | نلتقي بالمحبة</title>
 <style>
 :root{--bg:#f3f5ff;--card:#fff;--text:#1d1f2b;--muted:#6b7080;--p:#6c5ce7;--p2:#00b4d8;--bd:#e6e8f0;--ok:#16875d;--no:#e5484d;--shadow:0 8px 24px #5145cd12;--fs:16px}
 [data-theme=dark]{--bg:#12131a;--card:#1c1e29;--text:#e8e9f0;--muted:#9a9db0;--bd:#2c2f3d;--shadow:0 8px 24px #0002}
@@ -320,9 +320,223 @@ html{scroll-padding-top:88px}body{background:radial-gradient(ellipse at 92% 0,rg
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
 
+<style id="final-brand-system">
+
+/* ============================================================
+   المجتمع الروحي — identity refresh / release
+   A warm editorial identity: plum, olive, terracotta and linen.
+   The existing Firebase-backed application and its DOM hooks stay intact.
+   ============================================================ */
+:root{
+ --p:#493653;--p2:#bf7e70;--bg:#f7f3ee;--card:#fffdf9;--text:#302a34;--muted:#77717b;
+ --bd:#e8dfe4;--ok:#527d68;--no:#ba5e66;--shadow:0 10px 30px rgba(56,37,56,.065);--fs:16px;
+ --brand:#493653;--brand-2:#75607d;--accent:#d6ae7a;--surface:var(--card);--surface-2:#f1e9ed;
+}
+[data-theme="dark"]{
+ --p:#c9a1d0;--p2:#d79b88;--bg:#18151c;--card:#231e29;--text:#f4edf3;--muted:#b2a7b4;
+ --bd:#3c3141;--ok:#83b69a;--no:#ed9296;--shadow:0 12px 34px rgba(0,0,0,.22);
+ --brand:#36253c;--brand-2:#5a3e62;--accent:#e0b98e;--surface:var(--card);--surface-2:#302635;
+}
+html{background:var(--bg);scroll-padding-top:94px}
+body{font-family:"Cairo",system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 86% -6%,rgba(191,126,112,.12),transparent 31%),radial-gradient(ellipse at 0 32%,rgba(95,119,99,.07),transparent 30%),var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+[data-theme="dark"] body{background:radial-gradient(ellipse at 86% 0,rgba(191,126,112,.09),transparent 30%),var(--bg)}
+button,input,textarea,select{font-family:inherit}
+button{touch-action:manipulation;transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
+button:active{transform:scale(.985)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--p2) 58%,transparent);outline-offset:3px}
+header{position:sticky;top:0;z-index:50;min-height:74px;padding:10px clamp(12px,3.2vw,38px);gap:14px;background:linear-gradient(112deg,#362640 0%,#493653 55%,#61516c 100%);color:#fff;border-bottom:1px solid rgba(227,196,166,.42);box-shadow:0 7px 24px rgba(48,31,52,.16)}
+.brand{display:flex;align-items:center;gap:11px;max-width:none!important;min-width:0;padding:0!important;color:#fff!important;background:transparent!important;border:0!important;box-shadow:none!important;text-align:start;white-space:normal}
+.brand-emblem{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border:1px solid rgba(232,201,161,.68);border-radius:16px;background:linear-gradient(145deg,#5a4262,#382641);color:#f0d0a5;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 4px 14px rgba(0,0,0,.1)}
+.brand-emblem svg{width:34px;height:34px}
+.brand-copy{display:flex;flex-direction:column;gap:2px;line-height:1.25;white-space:nowrap}
+.brand-copy strong{font-size:clamp(16px,2vw,21px);font-weight:850;letter-spacing:-.2px}
+.brand-copy small{font-size:11px;color:#e4d7e8;font-weight:500;letter-spacing:.3px}
+.header-actions{display:flex;align-items:center;gap:7px;min-width:0}
+header .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;min-width:42px;min-height:42px;padding:8px;border:1px solid rgba(255,255,255,.19);border-radius:14px;background:rgba(255,255,255,.08);color:#fff;box-shadow:none;font-size:17px}
+header .icon-btn:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.36)}
+header .icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+header .hamburger-icon{font-size:21px;line-height:1}
+#installHeaderButton{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;padding:8px 13px;border:1px solid #ead0aa;border-radius:14px;background:#ead0aa;color:#3c2a42;font-size:13px;font-weight:850;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+#installHeaderButton:hover{background:#f3ddbd}
+.install-arrow{font-size:19px;line-height:.9}
+#searchTopButton,#notificationsButton,#leaderboardButton,#settingsTopButton,#theme{display:inline-flex!important}
+#profileButton{display:inline-flex!important}
+.notification-count{background:#d78177;border-color:#493653;color:#fff}
+main{width:min(100% - 32px,1100px);max-width:1100px;margin:0 auto;padding:22px 0 42px;min-height:calc(100vh - 140px)}
+#appView{min-width:0}
+.card{border:1px solid var(--bd);border-radius:22px;background:var(--card);box-shadow:var(--shadow);padding:19px;margin:0 0 16px;min-width:0}
+.section-title{font-weight:850;color:var(--text);letter-spacing:-.2px;margin-bottom:13px}
+.muted,.rules{color:var(--muted)}
+.pill{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;border:1px solid var(--bd);background:var(--surface-2);color:var(--muted);font-size:11px;font-weight:750}
+input[type=text],input[type=email],input[type=password],input[type=search],input[type=date],input[type=number],input[type=url],textarea,select{width:100%;min-width:0;padding:12px 13px;border:1px solid var(--bd);border-radius:14px;background:var(--bg);color:var(--text);box-shadow:inset 0 1px 2px rgba(39,27,43,.025);font-size:15px}
+textarea{line-height:1.85;min-height:90px;resize:vertical}
+input::placeholder,textarea::placeholder{color:color-mix(in srgb,var(--muted) 82%,transparent)}
+label{font-size:13px;font-weight:800;color:var(--text)}
+button:not(.brand):not(.icon-btn):not(.app-nav-item):not(.drawer-item):not(.quick-composer):not(.hero-chip){min-height:41px;padding:9px 15px;border:1px solid transparent;border-radius:13px;background:linear-gradient(125deg,#493653,#665372);color:#fff;font-size:.88rem;font-weight:800;box-shadow:0 4px 12px rgba(73,54,83,.12)}
+button:not(.brand):not(.icon-btn):not(.app-nav-item):not(.drawer-item):not(.quick-composer):not(.hero-chip):hover{filter:none;box-shadow:0 7px 18px rgba(73,54,83,.16);transform:translateY(-1px)}
+button.act{background:var(--surface-2)!important;border:1px solid var(--bd)!important;color:var(--text)!important;box-shadow:none!important}
+button.ok{background:var(--ok)!important;color:white!important}
+button.no{background:var(--no)!important;color:white!important}
+button.on{border-color:color-mix(in srgb,var(--p2) 72%,var(--bd))!important;color:var(--p)!important;background:color-mix(in srgb,var(--p2) 11%,var(--card))!important}
+/* Main navigation: horizontal on desktop, thumb-friendly dock on mobile. */
+nav#appNav.app-nav{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;width:min(100%,720px);margin:0 auto 20px;padding:8px;border:1px solid var(--bd);border-radius:20px;background:color-mix(in srgb,var(--card) 93%,transparent);box-shadow:0 9px 28px rgba(51,39,57,.075);backdrop-filter:blur(16px);position:sticky;top:84px;z-index:32}
+button.app-nav-item{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:52px;padding:8px 10px;border:1px solid transparent;border-radius:14px;background:transparent!important;color:var(--muted);box-shadow:none!important;font-weight:800;font-size:13px}
+.app-nav-item .nav-icon{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:10px;background:var(--surface-2);color:var(--p);font-size:25px;line-height:1;font-family:system-ui,sans-serif}
+.app-nav-item.on{background:color-mix(in srgb,var(--p) 8%,var(--card))!important;color:var(--p)!important;border-color:color-mix(in srgb,var(--p) 17%,var(--bd))!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)!important}
+.app-nav-item.on .nav-icon{background:var(--p);color:#fff}
+/* Home hero / faith identity */
+.spiritual-hero{position:relative;isolation:isolate;display:flex;align-items:stretch;overflow:hidden;min-height:250px;padding:clamp(22px,4vw,40px)!important;border:1px solid #846a88!important;border-radius:28px!important;background:linear-gradient(115deg,#35243d 0%,#4d3857 54%,#66506b 100%)!important;color:#fff!important;box-shadow:0 18px 42px rgba(65,43,73,.16)!important}
+.spiritual-hero:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(circle at 13% 100%,rgba(207,155,124,.22),transparent 34%),radial-gradient(circle at 76% 13%,rgba(231,204,170,.12),transparent 32%)}
+.spiritual-hero .hero-content{position:relative;z-index:2;max-width:720px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(236,208,178,.27);border-radius:999px;background:rgba(255,255,255,.08);padding:7px 12px;color:#f1dbbd;font-size:12px;font-weight:800;letter-spacing:.2px}
+.hero-cross{font-size:17px;color:#e8c6a0}
+.spiritual-hero h2{margin:15px 0 9px;font-size:clamp(25px,4vw,39px);line-height:1.35;letter-spacing:-.65px;color:#fff}
+.spiritual-hero p{max-width:650px;color:#e8dfe9;line-height:1.95;font-size:14px;margin:0}
+.spiritual-hero .hero-verse{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:18px 0 14px;padding-inline-start:13px;border-inline-start:3px solid #d5ac85;color:#f0d0ae;font-weight:800}
+.hero-verse span{font-size:11px;color:#d4c3d6;font-weight:650}
+.spiritual-hero .hero-symbol{position:absolute;z-index:-1;inset:auto auto:-35px 2.5%;font-size:clamp(150px,22vw,260px);line-height:1;color:rgba(255,255,255,.045);font-family:Georgia,serif;transform:rotate(-9deg)}
+.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.hero-chip{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border:1px solid rgba(241,221,202,.25)!important;border-radius:999px;background:rgba(255,255,255,.09)!important;color:#fff!important;font-size:12px;font-weight:800}
+.hero-chip:hover{background:rgba(255,255,255,.17)!important}
+.quick-composer{display:block;width:100%;text-align:start;border:1px solid var(--bd)!important;border-radius:19px!important;background:var(--card)!important;color:var(--text)!important;padding:14px 16px!important;box-shadow:var(--shadow)!important}
+.quick-composer-inner{display:flex;align-items:center;gap:12px;width:100%}
+.quick-avatar{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:14px;background:color-mix(in srgb,var(--p2) 14%,var(--surface-2));color:var(--p)}
+.quick-prompt{display:block;flex:1;min-width:0;padding:11px 14px;border-radius:13px;background:var(--bg);color:var(--muted);font-weight:600}
+.quick-photo{font-size:20px;color:var(--p2)}
+#dailyCard{border-top:3px solid var(--p2);background:linear-gradient(120deg,var(--card),color-mix(in srgb,var(--p2) 5%,var(--card)))}
+/* Feed and interactions */
+.post-card{padding:18px 19px 15px;margin:0 0 15px;border-radius:22px;overflow:visible;transition:box-shadow .18s,border-color .18s}
+.post-card:hover{border-color:color-mix(in srgb,var(--p2) 36%,var(--bd));box-shadow:0 14px 36px rgba(52,38,57,.09)}
+.post-head{gap:12px;align-items:center;padding-bottom:13px;border-bottom:1px solid color-mix(in srgb,var(--bd) 78%,transparent)}
+.post-head>.av{width:47px;height:47px;flex:0 0 47px;border:2px solid color-mix(in srgb,var(--p2) 44%,var(--card));box-shadow:0 2px 9px rgba(62,44,68,.08)}
+.post-head .grow{padding-top:0;line-height:1.45}
+.post-author-name{display:inline-flex;align-items:center;justify-content:flex-start;text-align:start;max-width:100%;padding:0!important;margin:0 0 4px;background:transparent!important;color:var(--text)!important;border:0!important;box-shadow:none!important;font-size:14px;font-weight:900}
+.post-head .row{gap:5px}
+.post-head .time{font-size:10px;color:var(--muted)}
+.post-head .pill{font-size:10px;padding:3px 8px}
+.post-copy{font-size:15px;line-height:2;margin:14px 2px 16px;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word}
+.post-card .single-photo,.post-card .imggrid{margin:12px 0 14px;overflow:hidden;border-radius:17px}
+.post-card .pimg{margin:0;border-radius:0;max-height:560px;display:block}
+.post-card .single-photo .pimg{max-height:580px;width:100%;object-fit:cover}
+.post-card .imggrid{gap:4px}
+.post-card .imggrid .pimg{height:clamp(150px,28vw,270px);object-fit:cover}
+.post-counts{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 2px;border-bottom:1px solid var(--bd)}
+.heart-count{font-size:12px;font-weight:750;color:var(--muted);padding:0}
+.post-counts .comment-count{min-height:auto;padding:4px 0;background:transparent!important;border:0!important;color:var(--muted)!important;box-shadow:none!important;font-size:12px;font-weight:800}
+.post-actions{display:flex;align-items:center;gap:8px;margin:0;padding:10px 0 0;border-top:0}
+.post-actions .heart-reaction,.post-actions>.post-comment-toggle{flex:1;min-height:43px;justify-content:center;border:1px solid var(--bd);border-radius:13px;background:var(--bg);font-size:13px;font-weight:850;color:var(--muted)}
+.post-actions .heart-reaction.on{color:#b44d6c!important;background:color-mix(in srgb,#b44d6c 10%,var(--card))!important;border-color:color-mix(in srgb,#b44d6c 33%,var(--bd))!important}
+.post-actions .post-more{flex:0 0 44px;position:relative}
+.post-more>summary{width:44px;height:43px;display:grid;place-items:center;border:1px solid var(--bd);border-radius:13px;background:var(--bg);color:var(--text);font-size:21px;font-weight:800;cursor:pointer;list-style:none}
+.post-more>summary::-webkit-details-marker{display:none}
+.post-more[open]>summary{border-color:var(--p2)}
+.post-more .action-menu{position:absolute;z-index:44;top:48px;inset-inline-end:0;width:min(260px,78vw);display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:9px;background:var(--card);border:1px solid var(--bd);border-radius:15px;box-shadow:0 18px 45px rgba(44,30,49,.2)}
+.post-more .action-menu button{text-align:start;justify-content:flex-start;min-height:39px}
+.comments-panel{margin-top:13px;padding:14px;border:1px solid var(--bd);border-radius:17px;background:color-mix(in srgb,var(--bg) 76%,var(--card))}
+.comments-panel>.muted{margin:4px 0 10px}
+.comment-card{padding:12px;margin:8px 0;background:var(--card);border:1px solid var(--bd);border-radius:14px;font-size:.9em}
+.comment-card>.text{margin:8px 0 10px;line-height:1.8}
+.comment-card .tools{gap:6px;padding-top:7px;border-top:1px solid color-mix(in srgb,var(--bd) 75%,transparent)}
+.comment-card .tools .act{padding:6px 9px;border-radius:9px;font-size:12px}
+.comment-card.reply{margin-inline-start:17px;border-inline-start:3px solid color-mix(in srgb,var(--p2) 72%,var(--bd));border-radius:12px}
+.comments-panel>.crow,.comment-card .crow{display:flex;gap:8px;align-items:center;margin-top:11px}
+.comments-panel>.crow input,.comment-card .crow input{min-width:0;flex:1;background:var(--card);border-radius:12px;min-height:43px}
+.comments-panel>.crow button,.comment-card .crow button{min-height:43px;padding-inline:16px;border-radius:12px;background:var(--p)}
+.comment-card .time{font-size:11px}
+.quoted-post{border-radius:15px;padding:13px;border:1px solid var(--bd);border-inline-start:3px solid var(--p2);background:var(--bg)}
+/* Login, onboarding, and profile */
+#loginView:not(.hide){display:grid!important;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);width:min(calc(100% - 32px),1000px);margin:34px auto;overflow:hidden;border:1px solid var(--bd);border-radius:28px;background:var(--card);box-shadow:0 20px 55px rgba(57,38,63,.11);text-align:start!important}
+.auth-banner{display:flex;flex-direction:column;justify-content:center;min-height:440px;padding:clamp(26px,4vw,48px)!important;background:radial-gradient(circle at 15% 100%,rgba(201,151,120,.24),transparent 35%),linear-gradient(145deg,#35243d,#594460)!important;color:#fff;text-align:start!important}
+.auth-banner:after{content:'✝';position:absolute;inset-inline-start:auto;inset-inline-end:7%;bottom:-22px;color:rgba(255,255,255,.06);font-size:clamp(110px,14vw,180px);line-height:1}
+.auth-mark{display:grid;place-items:center;width:66px;height:66px;margin:0 0 22px;border:1px solid rgba(232,201,161,.58);border-radius:21px;background:rgba(255,255,255,.08);color:#f1d3aa;font-size:40px;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.auth-kicker{color:#ecd0b1;font-size:13px;font-weight:800;letter-spacing:.3px;margin:0 0 8px}
+.auth-banner h1{font-size:clamp(29px,3.5vw,40px);line-height:1.35;margin:0 0 10px;color:#fff}
+.auth-tagline{font-size:14px;line-height:1.95;color:#e6dce8;max-width:34ch;margin:0}
+.auth-content{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:clamp(23px,4vw,43px)!important;text-align:start}
+.auth-content h3{font-size:21px;margin:0 0 5px;color:var(--text)}
+.auth-lead{font-size:13px;line-height:1.9;margin:0 0 18px}
+.auth-content #authFields label{margin:12px 0 6px}
+.auth-content #authFields input{min-height:46px;margin-bottom:4px}
+.auth-actions{margin-top:7px}
+.auth-actions button{width:100%;min-height:46px}
+.auth-divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:12px;margin:18px 0}
+.auth-divider:before,.auth-divider:after{content:"";height:1px;flex:1;background:var(--bd)}
+.auth-divider span{white-space:nowrap}
+#loginBtn.google-login{display:flex!important;align-items:center;justify-content:center;gap:12px;width:100%;min-height:48px;border:1px solid var(--bd)!important;background:var(--card)!important;color:var(--text)!important;box-shadow:0 3px 10px rgba(55,35,60,.04)!important;font-size:14px;font-weight:850}
+#loginBtn.google-login span{display:grid;place-items:center;width:27px;height:27px;border-radius:9px;border:1px solid var(--bd);font-family:Arial,sans-serif;font-size:17px;font-weight:900;color:#4285f4;background:#fff}
+#loginBtn[aria-busy="true"]{opacity:.7;cursor:progress}
+#authMsg{min-height:18px;font-size:12px;line-height:1.8;color:var(--no);overflow-wrap:anywhere}
+.auth-note{font-size:11px;margin-top:13px;line-height:1.8}
+.auth-card{width:min(100%,620px);margin:26px auto;border-radius:24px;padding:clamp(20px,4vw,32px)}
+#nameView .section-title,#nameView h3{font-size:22px}
+#profileHeader{overflow:hidden;border-radius:23px;padding:clamp(16px,3vw,28px)}
+#profilePosts{padding-top:4px}
+/* Drawer, settings, notifications, community, administration and modal surfaces */
+.side-drawer{background:var(--card)!important;border-color:var(--bd)!important;box-shadow:-20px 0 60px rgba(43,28,48,.20)!important}
+.drawer-head{padding-bottom:17px;border-bottom:1px solid var(--bd);margin-bottom:14px}
+.drawer-profile-avatar{border:2px solid color-mix(in srgb,var(--p2) 65%,var(--bd))}
+.drawer-section-label{color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.6px;padding:8px 10px}
+.drawer-item{display:flex;align-items:center;gap:12px;width:100%;min-height:45px;padding:10px 12px;border-radius:13px;background:transparent!important;color:var(--text)!important;border:1px solid transparent!important;box-shadow:none!important;text-align:start;font-weight:750}
+.drawer-item:hover,.drawer-item.on{background:var(--surface-2)!important;border-color:var(--bd)!important;color:var(--p)!important}
+.drawer-logout{color:var(--no)!important}
+.drawer-scrim{background:rgba(29,22,32,.45)!important;backdrop-filter:blur(3px)}
+.settings-layout{gap:15px}
+.settings-category{border-radius:20px;background:var(--card);border-color:var(--bd);box-shadow:var(--shadow)}
+.settings-category>summary{font-weight:850}
+.settings-icon,.settings-intro-mark{border-radius:14px;background:color-mix(in srgb,var(--p) 11%,var(--surface-2));color:var(--p)}
+.settings-intro{border-radius:22px;background:linear-gradient(125deg,color-mix(in srgb,var(--p) 8%,var(--card)),var(--card))}
+.settings-group{border-radius:15px;background:var(--bg);border-color:var(--bd)}
+.admin-panel,.admin-panel>.card{border-radius:18px}
+.admin-panel .section-title{color:var(--p)}
+.result,.friend-row,.notification-item,.support-ticket{border:1px solid var(--bd)!important;border-radius:15px!important;background:var(--card)!important;padding:13px!important;margin:8px 0}
+.modal{z-index:1000;background:rgba(31,23,34,.62);backdrop-filter:blur(5px);padding:16px}
+.modal-panel{width:min(100%,720px);max-height:min(92dvh,900px);padding:clamp(15px,2.7vw,25px);border:1px solid var(--bd);border-radius:24px;background:var(--card);box-shadow:0 24px 70px rgba(30,20,35,.27)}
+.compose-panel>.row{padding-bottom:10px;border-bottom:1px solid var(--bd)}
+.composer-card{border:0!important;box-shadow:none!important;background:transparent!important;padding:5px 0!important}
+#postText{min-height:150px;background:var(--bg)}
+#postPolicyNote{padding:10px 12px;border-radius:12px;background:var(--surface-2)}
+.lightbox-panel{border-radius:22px;background:rgba(25,20,29,.97)}
+.site-credit{padding:24px 12px calc(28px + env(safe-area-inset-bottom));color:var(--muted);font-size:11px;letter-spacing:.15px}
+/* Signed-in-only actions. The install action remains available to guests. */
+header .header-actions #menuToggle,header .header-actions #profileButton,header .header-actions #searchTopButton,header .header-actions #notificationsButton,header .header-actions #leaderboardButton,header .header-actions #settingsTopButton,header .header-actions #theme{display:none!important}
+body.app-authenticated header .header-actions #menuToggle,body.app-authenticated header .header-actions #profileButton,body.app-authenticated header .header-actions #searchTopButton,body.app-authenticated header .header-actions #notificationsButton,body.app-authenticated header .header-actions #leaderboardButton,body.app-authenticated header .header-actions #settingsTopButton,body.app-authenticated header .header-actions #theme{display:inline-flex!important}
+@media(min-width:900px){main{padding-top:25px}.spiritual-hero{margin-top:4px}.post-card{padding:21px 23px 17px}.auth-content{padding:44px!important}}
+@media(max-width:760px){
+ #loginView:not(.hide){grid-template-columns:1fr;width:calc(100% - 20px);margin:16px auto 26px;border-radius:23px}
+ .auth-banner{min-height:auto;padding:24px 22px!important}
+ .auth-mark{width:51px;height:51px;margin-bottom:15px;border-radius:17px;font-size:32px}
+ .auth-banner h1{font-size:28px}.auth-banner:after{font-size:115px;bottom:-30px}
+ .auth-content{padding:22px!important}
+ nav#appNav.app-nav{position:fixed;top:auto;bottom:calc(8px + env(safe-area-inset-bottom));left:10px;right:10px;width:auto;max-width:560px;margin:0 auto;padding:6px;gap:3px;border-radius:20px;z-index:80;background:color-mix(in srgb,var(--card) 94%,transparent);box-shadow:0 12px 35px rgba(42,30,48,.18);backdrop-filter:blur(20px)}
+ button.app-nav-item{flex-direction:column;gap:3px;min-height:55px;padding:4px 3px;border-radius:14px;font-size:10px;line-height:1.15}
+ .app-nav-item .nav-icon{width:29px;height:27px;font-size:23px;border-radius:9px}
+ main{width:calc(100% - 18px);padding:13px 0 calc(100px + env(safe-area-inset-bottom))!important}
+ .spiritual-hero{min-height:0;padding:22px 19px!important;border-radius:22px!important}
+ .spiritual-hero h2{font-size:25px}.spiritual-hero p{font-size:13px}
+ .hero-chips{gap:6px}.hero-chip{font-size:11px;padding:8px 10px}
+ .quick-composer{padding:12px!important}.quick-prompt{font-size:12px;padding:10px}
+ .card{padding:14px;border-radius:17px;margin-bottom:12px}
+ .post-card{padding:14px 13px 12px;margin-bottom:11px;border-radius:19px}
+ .post-head>.av{width:43px;height:43px;flex-basis:43px}
+ .post-copy{line-height:1.95;margin:12px 1px 14px;font-size:14px}
+ .post-actions{gap:6px}.post-actions .heart-reaction,.post-actions>.post-comment-toggle{min-height:41px;font-size:11px;padding:7px 4px}
+ .post-actions .post-more{flex-basis:39px}.post-more>summary{width:39px;height:41px}
+ .post-counts{padding:7px 1px}.comments-panel{padding:9px;border-radius:14px}.comment-card{padding:10px}
+ .post-card .imggrid .pimg{height:clamp(135px,42vw,220px)}
+ .settings-layout{grid-template-columns:1fr}.settings-span-2{grid-column:auto}
+ .header-actions{gap:4px}.brand{gap:7px}.brand-emblem{width:38px;height:38px;flex-basis:38px;border-radius:13px}.brand-emblem svg{width:29px;height:29px}.brand-copy strong{font-size:15px}.brand-copy small{font-size:9px}
+ header{min-height:62px;padding:8px 10px;gap:5px}.header-actions .icon-btn{width:35px;height:35px;min-width:35px;min-height:35px;padding:6px;border-radius:11px}
+ #installHeaderButton{min-height:35px;padding:6px 8px;font-size:11px;border-radius:11px}.install-arrow{font-size:16px}
+ .side-drawer{width:min(350px,90vw)}
+ .modal{padding:7px;align-items:flex-end}.modal-panel{max-height:94dvh;border-radius:22px 22px 12px 12px;padding:14px}
+}
+@media(max-width:390px){header .header-actions #leaderboardButton,header .header-actions #settingsTopButton{display:none!important}.brand-copy strong{font-size:14px}.header-actions{gap:3px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+</style>
 </head>
 <body>
-<header><button class="brand" id="appHomeLink" type="button">✝️ المجتمع الروحي</button><div class="header-actions"><button aria-label="فتح القائمة الجانبية" aria-controls="sideDrawer" aria-expanded="false" class="icon-btn menu-toggle hide" id="menuToggle" title="القائمة" type="button">☰</button><button id="installHeaderButton" type="button" title="تثبيت المجتمع الروحي على جهازك">⬇ تثبيت</button><button aria-label="البحث عن حساب" class="icon-btn" id="searchTopButton" title="البحث عن حساب" type="button">🔎</button><button aria-label="الإشعارات" class="icon-btn" id="notificationsButton" title="الإشعارات" type="button">🔔 <span class="notification-count hide" id="notificationCount">0</span></button><button aria-label="الصدارة" class="icon-btn" id="leaderboardButton" title="الصدارة" type="button">🏆</button><button aria-label="الإعدادات" class="icon-btn" id="settingsTopButton" title="الإعدادات" type="button">⚙️</button><button aria-label="الملف الشخصي" class="icon-btn profile-top hide" id="profileButton" title="الملف الشخصي" type="button">👤</button><button aria-label="تبديل المظهر" class="icon-btn theme-btn" id="theme" title="تبديل المظهر" type="button">🌙</button></div><span class="hide" id="who"></span><span class="hide" id="connection">● متصل</span></header>
+<header><button class="brand" id="appHomeLink" type="button" aria-label="المجتمع الروحي، الصفحة الرئيسية"><span class="brand-emblem" aria-hidden="true"><svg viewBox="0 0 52 52" focusable="false"><circle cx="26" cy="26" r="22" fill="none" stroke="currentColor" stroke-width="1.6" opacity=".65"/><path d="M23.5 10h5v12.5H41v5H28.5V42h-5V27.5H11v-5h12.5z" fill="currentColor"/><path d="M15 39c4-2 7-2 11-1m11 1c-4-2-7-2-11-1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".8"/></svg></span><span class="brand-copy"><strong>المجتمع الروحي</strong><small>نلتقي بالمحبة</small></span></button><div class="header-actions"><button aria-label="فتح القائمة الجانبية" aria-controls="sideDrawer" aria-expanded="false" class="icon-btn menu-toggle hide" id="menuToggle" title="القائمة" type="button"><span class="hamburger-icon" aria-hidden="true">☰</span></button><button id="installHeaderButton" type="button" title="تثبيت المجتمع الروحي على جهازك"><span class="install-arrow" aria-hidden="true">↓</span> تثبيت</button><button aria-label="البحث عن حساب" class="icon-btn" id="searchTopButton" title="البحث عن حساب" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"/><path d="m16 16 4.2 4.2"/></svg></button><button aria-label="الإشعارات" class="icon-btn" id="notificationsButton" title="الإشعارات" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="notification-count hide" id="notificationCount">0</span></button><button aria-label="الصدارة" class="icon-btn" id="leaderboardButton" title="الصدارة" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8v4a4 4 0 0 1-8 0V4ZM8 6H4v2a4 4 0 0 0 4 4m8-6h4v2a4 4 0 0 1-4 4M12 12v5m-5 3h10M9 17h6"/></svg></button><button aria-label="الإعدادات" class="icon-btn" id="settingsTopButton" title="الإعدادات" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1a1.7 1.7 0 1 1-2.4 2.4l-.1-.1a1.7 1.7 0 0 0-2.9 1.2v.2a1.7 1.7 0 1 1-3.4 0v-.2A1.7 1.7 0 0 0 7.8 17l-.1.1a1.7 1.7 0 1 1-2.4-2.4l.1-.1a1.7 1.7 0 0 0-1.2-2.9H4a1.7 1.7 0 1 1 0-3.4h.2A1.7 1.7 0 0 0 5.4 6.3l-.1-.1a1.7 1.7 0 1 1 2.4-2.4l.1.1a1.7 1.7 0 0 0 2.9-1.2v-.2a1.7 1.7 0 1 1 3.4 0v.2A1.7 1.7 0 0 0 17 3.9l.1-.1a1.7 1.7 0 1 1 2.4 2.4l-.1.1a1.7 1.7 0 0 0 1.2 2.9h.2a1.7 1.7 0 1 1 0 3.4h-.2a1.7 1.7 0 0 0-1.2 2.4Z"/></svg></button><button aria-label="الملف الشخصي" class="icon-btn profile-top hide" id="profileButton" title="الملف الشخصي" type="button">👤</button><button aria-label="تبديل المظهر" class="icon-btn theme-btn" id="theme" title="تبديل المظهر" type="button">🌙</button></div><span class="hide" id="who"></span><span class="hide" id="connection">● متصل</span></header>
 <div class="drawer-scrim hide" id="drawerScrim" aria-hidden="true"></div>
 <aside aria-hidden="true" aria-label="القائمة الجانبية" class="side-drawer hide" id="sideDrawer"><div class="drawer-head"><div aria-label="فتح الملف الشخصي" class="drawer-profile-avatar" id="drawerProfileAvatar" role="button" tabindex="0">👤</div><div class="drawer-brand-copy"><strong id="drawerProfileName">ملفي الشخصي</strong><span>المجتمع الروحي</span></div><button aria-label="إغلاق القائمة" class="icon-btn drawer-close" id="drawerClose" type="button">✕</button></div><div class="drawer-section-label">التنقل</div><button class="drawer-item" data-view="home" id="drawerHome" type="button"><span aria-hidden="true">⌂</span>الرئيسية</button><button class="drawer-item" data-view="search" id="drawerSearch" type="button"><span aria-hidden="true">⌕</span>البحث عن حساب</button><button class="drawer-item" data-view="community" id="drawerCommunity" type="button"><span aria-hidden="true">♧</span>المجتمع والأصدقاء</button><button class="drawer-item" data-view="profile" id="drawerProfile" type="button"><span aria-hidden="true">◉</span>ملفي الشخصي</button><div class="drawer-section-label">أدوات الحساب</div><button class="drawer-item" data-view="notifications" id="drawerNotifications" type="button"><span aria-hidden="true">🔔</span>الإشعارات<span class="drawer-count hide" id="drawerNotificationCount">0</span></button><button class="drawer-item" data-view="leaderboard" id="drawerLeaderboard" type="button"><span aria-hidden="true">🏆</span>الصدارة</button><button class="drawer-item" data-view="settings" id="drawerSettings" type="button"><span aria-hidden="true">⚙️</span>الإعدادات</button><button class="drawer-item" id="drawerTheme" type="button"><span aria-hidden="true" id="drawerThemeIcon">🌙</span>تبديل المظهر</button><button class="drawer-item drawer-publish" id="drawerPublish" type="button"><span aria-hidden="true">＋</span>نشر</button><button class="drawer-item drawer-logout" id="drawerLogout" type="button"><span aria-hidden="true">↪</span>تسجيل الخروج</button></aside>
 
@@ -347,10 +561,10 @@ html{scroll-padding-top:88px}body{background:radial-gradient(ellipse at 92% 0,rg
 <div class="card auth-card hide" id="nameView"><h3 id="setupTitle">أكمل ملفك في المجتمع الروحي</h3><p class="rules" id="setupInfo">اختر اسم عرض واسم مستخدم فريدًا، ثم أنشئ كلمة مرور لحسابك. اسم المستخدم يساعد الآخرين في العثور على ملفك.</p><label for="nameInput">اسم العرض</label><input autocomplete="name" id="nameInput" maxlength="30" placeholder="الاسم اللي هيظهر للناس" type="text"/><label for="englishNameInput">اسمك بالإنجليزي (اختياري)</label><input autocomplete="off" id="englishNameInput" maxlength="40" placeholder="مثال: Haitham" type="text"/><label for="usernameInput">اسم المستخدم الفريد</label><input autocomplete="username" id="usernameInput" maxlength="24" placeholder="3 إلى 24 حرفًا إنجليزيًا أو أرقام أو _" type="text"/><label for="setupPassword">كلمة مرور التطبيق</label><input autocomplete="new-password" class="password-setup-field" id="setupPassword" minlength="8" placeholder="8 أحرف على الأقل" type="password"/><label for="setupPasswordConfirm">تأكيد كلمة المرور</label><input autocomplete="new-password" class="password-setup-field" id="setupPasswordConfirm" minlength="8" placeholder="اكتب كلمة المرور مرة أخرى" type="password"/><p class="rules" id="nameMsg"></p><button id="nameBtn">حفظ ومتابعة</button></div>
 <div class="hide" id="appView">
 <nav class="app-nav card" id="appNav" aria-label="التنقل الرئيسي">
-  <button class="app-nav-item on" id="tHome" data-view="home" type="button" aria-current="page"><span class="nav-icon" aria-hidden="true">🏠</span><span class="nav-label">الرئيسية</span></button>
-  <button class="app-nav-item" id="tSearch" data-view="search" type="button"><span class="nav-icon" aria-hidden="true">🔎</span><span class="nav-label">اكتشف</span></button>
-  <button class="app-nav-item" id="tCommunity" data-view="community" type="button"><span class="nav-icon" aria-hidden="true">👥</span><span class="nav-label">المجتمع</span></button>
-  <button class="app-nav-item" id="tProfile" data-view="profile" type="button"><span class="nav-icon" aria-hidden="true">👤</span><span class="nav-label">ملفي</span></button>
+  <button class="app-nav-item on" id="tHome" data-view="home" type="button" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span class="nav-label">الرئيسية</span></button>
+  <button class="app-nav-item" id="tSearch" data-view="search" type="button"><span class="nav-icon" aria-hidden="true">⌕</span><span class="nav-label">اكتشف</span></button>
+  <button class="app-nav-item" id="tCommunity" data-view="community" type="button"><span class="nav-icon" aria-hidden="true">♧</span><span class="nav-label">المجتمع</span></button>
+  <button class="app-nav-item" id="tProfile" data-view="profile" type="button"><span class="nav-icon" aria-hidden="true">◉</span><span class="nav-label">ملفي</span></button>
 </nav>
 <section id="homeView">
 <div class="card welcome-card spiritual-hero">
@@ -364,7 +578,7 @@ html{scroll-padding-top:88px}body{background:radial-gradient(ellipse at 92% 0,rg
 <section class="hide" id="searchView"><div class="card"><h3 class="section-title">البحث عن الحسابات</h3><input autocomplete="off" id="searchInput" placeholder="ابحث بالاسم العربي أو الإنجليزي أو اسم المستخدم كاملًا" type="search"/><p class="rules">البحث بالاسم يقبل جزءًا من الاسم، أما اسم المستخدم فلا يظهر إلا عند مطابقته بالكامل.</p></div><div id="searchResults"></div></section><section class="hide" id="leaderboardView"><div class="card"><h3 class="section-title">🏆 الصدارة</h3><p class="rules">ترتيب تقريبي حسب النشاط والمشاركة.</p><div id="leaderboard"></div></div></section>
 <section class="hide" id="profileView"><div class="card" id="profileHeader"></div><div id="profilePosts"></div></section>
 <section class="hide" id="communityView"><button class="act" id="friendListBack">&larr; رجوع للملف الشخصي</button><div class="card"><h3 class="section-title">الأصدقاء وطلبات الصداقة</h3><label for="communityMode">القائمة</label><select id="communityMode"><option value="friends">الأصدقاء</option><option value="requests">طلبات الصداقة</option><option value="sentRequests">الطلبات المرسلة</option><option id="showSuggestions" value="suggestions">أشخاص مقترحون</option><option value="blocked">المحظورون</option></select><div id="communityResults"></div></div></section>
-<section class="hide settings-view" id="settingsView"><div class="settings-intro card"><div aria-hidden="true" class="settings-intro-mark">⚙️</div><div><h2>الإعدادات</h2><p>إدارة ملفك الشخصي ومظهر التطبيق وخصوصية حسابك والدعم من مكان واحد.</p></div></div><div class="settings-layout"><details class="settings-group settings-category settings-span-2" id="settingsProfileGroup"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">👤</span><span><b>الملف الشخصي</b><small>الاسم والصورة والغلاف والنبذة</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><div class="profile-editor-panel" id="profileEditor"><h3 class="section-title">تعديل الملف الشخصي</h3><label for="profileName">اسم العرض</label><input autocomplete="name" id="profileName" maxlength="30" placeholder="اسم العرض" type="text"/><label for="profileEnglishName">اسمك بالإنجليزي (اختياري)</label><input id="profileEnglishName" maxlength="40" placeholder="Haitham" type="text"/><label for="profileBio">نبذة عنك</label><textarea id="profileBio" maxlength="160" placeholder="اكتب نبذة قصيرة" rows="3"></textarea><label for="avatarFile">الصورة الشخصية</label><input accept="image/jpeg,image/png,image/webp" id="avatarFile" type="file"/><label for="coverFile">صورة الغلاف</label><input accept="image/jpeg,image/png,image/webp" id="coverFile" type="file"/><div class="tools"><button id="saveProfile" type="button">حفظ التعديلات</button><button class="act" id="removeAvatar" type="button">إزالة الصورة الشخصية</button><button class="act" id="removeCover" type="button">إزالة الغلاف</button></div><p class="rules" id="profileMsg"></p></div></div></details><details class="settings-group settings-category" id="settingsAppearanceGroup" open="open"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🎨</span><span><b>المظهر والقراءة</b><small>الألوان وحجم الخط ووضع القراءة</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><label for="accent">لون الموقع</label><select id="accent"><option value="#17395f">كحلي ملكي</option><option value="#1d6a74">أزرق مخضر</option><option value="#8a3f4c">خمري هادئ</option><option value="#8a6730">ذهبي ترابي</option><option value="#31558a">أزرق كلاسيكي</option></select><label for="fontSize">حجم الخط</label><select id="fontSize"><option value="14px">صغير</option><option selected="selected" value="16px">متوسط</option><option value="18px">كبير</option><option value="20px">كبير جدًا</option></select><label>لغة الواجهة</label><div class="language-lock"><span>عربي</span><span aria-hidden="true">✓</span></div><select class="hide" id="language"><option value="ar">العربية</option></select><div class="option"><input id="readingMode" type="checkbox"/><label for="readingMode">وضع القراءة المريح</label></div><button id="saveSettings">حفظ إعدادات العرض</button></div></details><details class="settings-group settings-category" id="settingsPrivacyGroup"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🔐</span><span><b>الخصوصية وأمان الحساب</b><small>خصوصية ملفك واسم المستخدم والخروج</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><label for="privacySelect">خصوصية الملف الشخصي</label><select id="privacySelect"><option value="public">الملف الشخصي عام</option><option value="private">الملف الشخصي خاص</option></select><label for="handleInput">اسم المستخدم (يتغير مرة كل 7 أيام)</label><input autocomplete="username" id="handleInput" maxlength="24" placeholder="مثال: haitham_23" type="text"/><p class="rules" id="handleMsg"></p><button id="savePrivacy">حفظ الخصوصية واسم المستخدم</button><hr/><button class="no" id="deleteAccountBtn">حذف الحساب وبياناته</button><p class="rules">الحذف نهائي ويزيل البيانات التابعة للحساب التي تسمح القواعد بحذفها.</p><button class="act" id="signOutButton">تسجيل الخروج</button></div></details><details class="settings-group settings-category" id="settingsSupportGroup"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🛟</span><span><b>الدعم والإبلاغ عن مشكلة</b><small>أرسل تفاصيل المشكلة للإدارة</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><p class="rules">اكتب المشكلة في مربع واحد، وهتوصل للمالك والمشرفين.</p><textarea id="supportMessage" maxlength="1500" placeholder="اشرح المشكلة اللي حصلت..." rows="4"></textarea><button id="sendSupport">إرسال للإدارة</button><p class="rules" id="supportMsg"></p></div></details><details class="settings-group admin-accordion settings-category" id="adminSettingsAccordion"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🛡️</span><span><b>لوحة الإدارة</b><small>الأقسام المتاحة حسب صلاحيات حسابك</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><section class="admin-panel" id="adminView"><div class="card"><h3 class="section-title">🛡️ لوحة الإدارة</h3><p class="rules">المالك له كل الصلاحيات، والمشرف تُحدد صلاحياته من قسم المشرفين.</p><label for="adminSection">قسم الإدارة</label><select id="adminSection"><option value="overview">نظرة عامة</option><option value="queue">مراجعة المنشورات</option><option value="posts">المنشورات المنشورة</option><option value="reports">البلاغات</option><option value="support">رسائل المشكلات</option><option value="users">المستخدمون</option><option value="moderators">المشرفون والصلاحيات</option><option value="roleLabels">تخصيص أسماء الأدوار</option><option value="logs">سجل الإدارة</option><option value="settings">سؤال اليوم</option></select><div id="adminContent"></div></div></section></div></details><div class="install-section settings-span-2 settings-card"><h3 class="section-title">📲 ثبّت التطبيق على جهازك</h3><p class="rules">ثبّت المجتمع الروحي على الشاشة الرئيسية وافتحه في نافذة مستقلة مثل باقي التطبيقات. لو المتصفح يدعم التثبيت هيظهر تأكيد مباشر؛ وإلا هتلاقي خيار «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية» في قائمة المتصفح.</p><button id="installAppButton" type="button">⬇️ تثبيت التطبيق</button><p class="rules" id="installStatus" role="status">التثبيت يحتاج فتح الموقع عبر رابط HTTPS بعد رفع الملفات.</p></div></div></section>
+<section class="hide settings-view" id="settingsView"><div class="settings-intro card"><div aria-hidden="true" class="settings-intro-mark">⚙️</div><div><h2>الإعدادات</h2><p>إدارة ملفك الشخصي ومظهر التطبيق وخصوصية حسابك والدعم من مكان واحد.</p></div></div><div class="settings-layout"><details class="settings-group settings-category settings-span-2" id="settingsProfileGroup"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">👤</span><span><b>الملف الشخصي</b><small>الاسم والصورة والغلاف والنبذة</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><div class="profile-editor-panel" id="profileEditor"><h3 class="section-title">تعديل الملف الشخصي</h3><label for="profileName">اسم العرض</label><input autocomplete="name" id="profileName" maxlength="30" placeholder="اسم العرض" type="text"/><label for="profileEnglishName">اسمك بالإنجليزي (اختياري)</label><input id="profileEnglishName" maxlength="40" placeholder="Haitham" type="text"/><label for="profileBio">نبذة عنك</label><textarea id="profileBio" maxlength="160" placeholder="اكتب نبذة قصيرة" rows="3"></textarea><label for="avatarFile">الصورة الشخصية</label><input accept="image/jpeg,image/png,image/webp" id="avatarFile" type="file"/><label for="coverFile">صورة الغلاف</label><input accept="image/jpeg,image/png,image/webp" id="coverFile" type="file"/><div class="tools"><button id="saveProfile" type="button">حفظ التعديلات</button><button class="act" id="removeAvatar" type="button">إزالة الصورة الشخصية</button><button class="act" id="removeCover" type="button">إزالة الغلاف</button></div><p class="rules" id="profileMsg"></p></div></div></details><details class="settings-group settings-category" id="settingsAppearanceGroup" open="open"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🎨</span><span><b>المظهر والقراءة</b><small>الألوان وحجم الخط ووضع القراءة</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><label for="accent">لون الموقع</label><select id="accent"><option value="#493653">أرجواني كنسي</option><option value="#75607d">موف هادئ</option><option value="#8a3f4c">خمري دافئ</option><option value="#8a6730">ذهبي ترابي</option><option value="#31556b">أزرق ليلي</option></select><label for="fontSize">حجم الخط</label><select id="fontSize"><option value="14px">صغير</option><option selected="selected" value="16px">متوسط</option><option value="18px">كبير</option><option value="20px">كبير جدًا</option></select><label>لغة الواجهة</label><div class="language-lock"><span>عربي</span><span aria-hidden="true">✓</span></div><select class="hide" id="language"><option value="ar">العربية</option></select><div class="option"><input id="readingMode" type="checkbox"/><label for="readingMode">وضع القراءة المريح</label></div><button id="saveSettings">حفظ إعدادات العرض</button></div></details><details class="settings-group settings-category" id="settingsPrivacyGroup"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🔐</span><span><b>الخصوصية وأمان الحساب</b><small>خصوصية ملفك واسم المستخدم والخروج</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><label for="privacySelect">خصوصية الملف الشخصي</label><select id="privacySelect"><option value="public">الملف الشخصي عام</option><option value="private">الملف الشخصي خاص</option></select><label for="handleInput">اسم المستخدم (يتغير مرة كل 7 أيام)</label><input autocomplete="username" id="handleInput" maxlength="24" placeholder="مثال: haitham_23" type="text"/><p class="rules" id="handleMsg"></p><button id="savePrivacy">حفظ الخصوصية واسم المستخدم</button><hr/><button class="no" id="deleteAccountBtn">حذف الحساب وبياناته</button><p class="rules">الحذف نهائي ويزيل البيانات التابعة للحساب التي تسمح القواعد بحذفها.</p><button class="act" id="signOutButton">تسجيل الخروج</button></div></details><details class="settings-group settings-category" id="settingsSupportGroup"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🛟</span><span><b>الدعم والإبلاغ عن مشكلة</b><small>أرسل تفاصيل المشكلة للإدارة</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><p class="rules">اكتب المشكلة في مربع واحد، وهتوصل للمالك والمشرفين.</p><textarea id="supportMessage" maxlength="1500" placeholder="اشرح المشكلة اللي حصلت..." rows="4"></textarea><button id="sendSupport">إرسال للإدارة</button><p class="rules" id="supportMsg"></p></div></details><details class="settings-group admin-accordion settings-category" id="adminSettingsAccordion"><summary><span class="settings-summary-copy"><span class="settings-summary-title"><span aria-hidden="true" class="settings-icon">🛡️</span><span><b>لوحة الإدارة</b><small>الأقسام المتاحة حسب صلاحيات حسابك</small></span></span></span><span aria-hidden="true" class="settings-chevron">⌄</span></summary><div class="settings-body"><section class="admin-panel" id="adminView"><div class="card"><h3 class="section-title">🛡️ لوحة الإدارة</h3><p class="rules">المالك له كل الصلاحيات، والمشرف تُحدد صلاحياته من قسم المشرفين.</p><label for="adminSection">قسم الإدارة</label><select id="adminSection"><option value="overview">نظرة عامة</option><option value="queue">مراجعة المنشورات</option><option value="posts">المنشورات المنشورة</option><option value="reports">البلاغات</option><option value="support">رسائل المشكلات</option><option value="users">المستخدمون</option><option value="moderators">المشرفون والصلاحيات</option><option value="roleLabels">تخصيص أسماء الأدوار</option><option value="logs">سجل الإدارة</option><option value="settings">سؤال اليوم</option></select><div id="adminContent"></div></div></section></div></details><div class="install-section settings-span-2 settings-card"><h3 class="section-title">📲 ثبّت التطبيق على جهازك</h3><p class="rules">ثبّت المجتمع الروحي على الشاشة الرئيسية وافتحه في نافذة مستقلة مثل باقي التطبيقات. لو المتصفح يدعم التثبيت هيظهر تأكيد مباشر؛ وإلا هتلاقي خيار «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية» في قائمة المتصفح.</p><button id="installAppButton" type="button">⬇️ تثبيت التطبيق</button><p class="rules" id="installStatus" role="status">التثبيت يحتاج فتح الموقع عبر رابط HTTPS بعد رفع الملفات.</p></div></div></section>
 <section class="hide" id="notificationsView"><div class="card"><button class="act" id="notificationsBack">&larr; الرئيسية</button><div class="row between"><h3 class="section-title">🔔 الإشعارات</h3><div class="tools"><button class="act" id="markAllRead">تعليم الكل كمقروء</button><button class="no" id="clearNotifications">مسح كل الإشعارات</button></div></div><div id="notificationsList"></div></div></section>
 </div>
 <div aria-label="كتابة منشور" aria-modal="true" class="modal hide" id="composeModal" role="dialog"><div class="modal-panel compose-panel"><div class="row between"><h3 class="section-title">اكتب سؤالًا أو مشاركة</h3><button class="act" id="closeComposer">✕</button></div><div class="card composer-card" id="postComposerCard"><textarea id="postText" maxlength="1000" placeholder="اكتب سؤالك الروحي أو تأملك أو طلب الصلاة..." rows="3"></textarea><div><label for="postVisibility">مين يشوف المنشور؟</label><select id="postVisibility" aria-label="من يمكنه رؤية المنشور"><option value="public">🌍 الجميع (منشور عام)</option><option value="friends">👥 الأصدقاء فقط</option></select></div><div class="imggrid" id="imagePreviews"></div><div class="tools" style="margin-top:9px"><button class="act" id="imgBtn">📷 إضافة صور (حتى 8)</button><input accept="image/jpeg,image/png,image/webp" class="hide" id="imgFile" multiple="" type="file"/><button class="act hide" id="clearImages">إزالة الصور</button><button class="act" id="draftBtn">💾 حفظ كمسودة</button><button class="act" id="restoreDraftBtn">استعادة مسودة</button><button id="postBtn">نشر للمراجعة</button></div><p class="rules" id="postMsg"></p><p class="rules" id="postPolicyNote">اختار جمهور المنشور: عام للجميع أو للأصدقاء فقط. المنشورات العادية بتظهر بعد مراجعة الإدارة.</p></div></div></div><div aria-label="عرض الصور" aria-modal="true" class="modal hide" id="imageLightbox" role="dialog"><div class="lightbox-panel"><button class="icon-btn lightbox-close" id="closeLightbox">✕</button><button class="icon-btn lightbox-nav" id="lightboxPrev">&lsaquo;</button><img alt="صورة مكبرة داخل المجتمع الروحي" id="lightboxImage"/><button class="icon-btn lightbox-nav" id="lightboxNext">&rsaquo;</button><div class="lightbox-caption" id="lightboxCaption"></div></div></div></main><footer class="site-credit"><strong>تم التطوير بواسطة هيثم أسامة بمساعدة الذكاء الاصطناعي</strong><span>المجتمع الروحي ✝️ · معًا في المحبة والخدمة</span></footer>
@@ -379,80 +593,66 @@ import {getFirestore,collection,addDoc,doc,getDoc,setDoc,updateDoc,deleteDoc,que
 const firebaseConfig={apiKey:'AIzaSyAbM5PTvjYT5s4m3r9Vezue8a3H1Rd8ERk',authDomain:'my-social-app-94baa.firebaseapp.com',projectId:'my-social-app-94baa',storageBucket:'my-social-app-94baa.firebasestorage.app',messagingSenderId:'1046859842661',appId:'1:1046859842661:web:2519eaf2363d66d6f2328c'};
 const OWNER_EMAIL='hythmasamh56@gmail.com';const app=initializeApp(firebaseConfig),auth=initializeAuth(app,{persistence:[indexedDBLocalPersistence,browserLocalPersistence]}),db=getFirestore(app),$=id=>document.getElementById(id),el=(tag,cls='',text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
 const PERMS=['moderatePosts','moderateComments','manageReports','manageUsers','viewStats'];const ROLE_PRESETS={مراجع:['moderatePosts'],مشرف:['moderatePosts','manageReports'],مراقب:['viewStats']};const ROLE_TITLES={owner:'المالك',مشرف:'مشرف',مراجع:'مراجع',مراقب:'مراقب',custom:'مشرف بصلاحيات مخصصة'};const FORBIDDEN_WORDS=['كسمك','كس امك','شرموط','شراميط','قحبة','خول','منيوك','منيك','متناك','ابن المتناكة','بنت المتناكة'];let me=null,myName='',myAvatar='',myCover='',myBio='',myEnglishName='',myPrivacy='public',myHandle='',isOwner=false,isModerator=false,myPermissions=[],myUser={},selectedImages=[],postsCache=[],usersCache=[],adminTab='overview',viewingUid=null,authMode='signin',notificationUnsub=null,feedRealtimeUnsubs=[],friendPostRealtimeUnsubs=new Map(),incomingRequestsUnsub=null,feedRefreshTimer=null,feedRealtimeUid='',publicRoleCache={},uiLabelCache={},needsPasswordSetup=false,authObserverVersion=0,authLoginDelay=null,platformOwnerUid='',lightboxEventsBound=false,currentLightboxImages=[],currentLightboxIndex=0,roleLabelCache={moderator:'مشرف',member:'عضو'};
-const views=['home','search','profile','community','leaderboard','settings','notifications'];const nowText=v=>{try{if(!v)return 'التاريخ غير متاح';const d=v.toDate?v.toDate():new Date(v);return d.toLocaleString('ar-EG',{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});}catch{return 'التاريخ غير متاح';}};const millis=v=>{try{return v?.toMillis?v.toMillis():v?.seconds?v.seconds*1000:0}catch{return 0}};const localDayKey=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};const can=p=>isOwner||myPermissions.includes(p);const visibleView=id=>{for(const v of views){const node=$(v+'View');if(node)node.classList.toggle('hide',v!==id)}document.querySelectorAll('[data-view]').forEach(button=>{const active=button.dataset.view===id;button.classList.toggle('on',active);if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});const sourceCount=$('notificationCount'),drawerCount=$('drawerNotificationCount');if(sourceCount&&drawerCount){drawerCount.textContent=sourceCount.textContent;drawerCount.classList.toggle('hide',sourceCount.classList.contains('hide'))}};const showApp=id=>{const target=id==='app'?'appView':id;['bootView','loginView','nameView','appView'].forEach(v=>{const visible=(id==='boot'&&v==='bootView')||v===target;$(v)?.classList.toggle('hide',!visible)});$('menuToggle')?.classList.toggle('hide',id!=='app');$('profileButton')?.classList.toggle('hide',id!=='app');if(id!=='app')closeSideDrawer();};
-function theme(t){const chosen=t==='dark'?'dark':'light';document.documentElement.dataset.theme=chosen;const icon=chosen==='dark'?'☀️':'🌙';if($('theme'))$('theme').textContent=icon;if($('drawerThemeIcon'))$('drawerThemeIcon').textContent=icon;try{localStorage.setItem('theme',chosen)}catch(e){console.warn('Theme preference could not be stored',e)}}try{theme(localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'))}catch{}$('theme').onclick=()=>theme(document.documentElement.dataset.theme==='dark'?'light':'dark');function storeSettings(){try{return JSON.parse(localStorage.getItem('masaSettings')||'{}')}catch{return {}}}const uiWords={loginBtn:['المتابعة باستخدام جوجل','Continue with Google'],nameBtn:['حفظ','Save'],tHome:['الرئيسية','Home'],tSearch:['اكتشف','Discover'],tProfile:['ملفي','My profile'],tCommunity:['المجتمع','Community'],tSettings:['⚙️ الإعدادات','⚙️ Settings'],tAdmin:['🛡️ الإدارة','🛡️ Admin'],latestBtn:['آخر المنشورات','Latest posts'],postBtn:['نشر للمراجعة','Submit post'],imgBtn:['📷 صور (حتى 8)','📷 Images (up to 8)'],clearImages:['إزالة الصور','Remove images'],draftBtn:['💾 حفظ كمسودة','💾 Save draft'],restoreDraftBtn:['استعادة مسودة','Restore draft'],answerDaily:['إرسال الإجابة','Submit answer'],saveProfile:['حفظ التعديلات','Save profile'],removeAvatar:['إزالة الصورة الشخصية','Remove avatar'],removeCover:['إزالة الغلاف','Remove cover'],savePrivacy:['حفظ الخصوصية والرابط','Save privacy and link'],deleteAccountBtn:['حذف الحساب وبياناته','Delete account and data'],showFollowers:['أصدقائي','Friends'],showFollowing:['أصدقاؤهم','Friends'],showSuggestions:['أشخاص مقترحون','Suggested people'],showRequests:['طلبات الصداقة','Friend requests'],showBlocked:['المحظورون','Blocked users'],clearSearch:['مسح الفلاتر','Clear filters'],showSearchHistory:['🕘 عمليات البحث السابقة','🕘 Search history'],saveSettings:['حفظ الإعدادات','Save settings']};function applyLanguage(lang){const ix=lang==='en'?1:0;Object.entries(uiWords).forEach(([id,values])=>{const n=$(id);if(n){const target=n.querySelector('.nav-label');if(target)target.textContent=values[ix];else n.textContent=values[ix]}});const headings=[['#loginView h3','أهلًا بيك 👋','Welcome 👋'],['#nameView h3','اختار اسم العرض','Choose a display name'],['#homeView .section-title','أهلًا بيك في المجتمع الروحي 👋','Welcome to AlMogtama AlRouhi 👋'],['#homeView .card:nth-child(2) h3','اكتب سؤالًا أو مشاركة ✍️','Write a post ✍️'],['#dailyCard .section-title','💡 سؤال اليوم','💡 Daily question'],['#searchView h3','البحث عن الحسابات 🔎','Search accounts 🔎'],['#settingsProfileGroup #profileEditor h3','تعديل الملف الشخصي','Edit profile'],['#communityView h3','👥 الأصدقاء وطلبات الصداقة','👥 Friends and requests'],['#settingsView .settings-intro h2','⚙️ الإعدادات','⚙️ Settings'],['#adminView h3','🛡️ لوحة الإدارة','🛡️ Admin dashboard']];headings.forEach(([sel,ar,en])=>{const n=document.querySelector(sel);if(n)n.textContent=ix?en:ar});if($('postText'))$('postText').placeholder=ix?'What would you like to share?':'اكتب سؤالك الروحي أو تأملك أو طلب الصلاة...';if($('searchInput'))$('searchInput').placeholder=ix?'Search people...':'ابحث عن اسم العرض أو اسم المستخدم...';if($('profileBio'))$('profileBio').placeholder=ix?'Write a short bio...':'اكتب نبذة قصيرة عنك...';if($('dailyAnswer'))$('dailyAnswer').placeholder=ix?'Your answer (optional)':'إجابتك (اختياري)';}function applySettings(s=storeSettings()){const oldPalette=['#6c5ce7','#0b8f87','#db4c86','#da7b13','#2876d2'];let accent=oldPalette.includes(s.accent)?'#1d5145':(s.accent||'#1d5145');const allowedPalette=['#1d5145','#286b5c','#785c37','#3f6470','#496247'];if(!allowedPalette.includes(accent))accent='#1d5145';document.documentElement.style.setProperty('--p',accent);document.documentElement.style.setProperty('--p2','#d7b66b');if(s.fontSize)document.documentElement.style.setProperty('--fs',s.fontSize);document.body.classList.toggle('reading',!!s.readingMode);document.documentElement.lang='ar';document.documentElement.dir='rtl';applyLanguage('ar');if($('accent'))$('accent').value=accent;if($('fontSize'))$('fontSize').value=s.fontSize||'16px';if($('readingMode'))$('readingMode').checked=!!s.readingMode;if($('language'))$('language').value='ar'}applySettings();$('connection').textContent=navigator.onLine?'● متصل':'● بدون إنترنت';window.addEventListener('online',()=>{$('connection').textContent='● متصل'});window.addEventListener('offline',()=>{$('connection').textContent='● بدون إنترنت'});
+const views=['home','search','profile','community','leaderboard','settings','notifications'];const nowText=v=>{try{if(!v)return 'التاريخ غير متاح';const d=v.toDate?v.toDate():new Date(v);return d.toLocaleString('ar-EG',{year:'numeric',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});}catch{return 'التاريخ غير متاح';}};const millis=v=>{try{return v?.toMillis?v.toMillis():v?.seconds?v.seconds*1000:0}catch{return 0}};const localDayKey=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};const can=p=>isOwner||myPermissions.includes(p);const visibleView=id=>{for(const v of views){const node=$(v+'View');if(node)node.classList.toggle('hide',v!==id)}document.querySelectorAll('[data-view]').forEach(button=>{const active=button.dataset.view===id;button.classList.toggle('on',active);if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current')});const sourceCount=$('notificationCount'),drawerCount=$('drawerNotificationCount');if(sourceCount&&drawerCount){drawerCount.textContent=sourceCount.textContent;drawerCount.classList.toggle('hide',sourceCount.classList.contains('hide'))}};const showApp=id=>{const target=id==='app'?'appView':id;document.body.classList.toggle('app-authenticated',id==='app');['bootView','loginView','nameView','appView'].forEach(v=>{const visible=(id==='boot'&&v==='bootView')||v===target;$(v)?.classList.toggle('hide',!visible)});$('menuToggle')?.classList.toggle('hide',id!=='app');$('profileButton')?.classList.toggle('hide',id!=='app');if(id!=='app')closeSideDrawer();};
+function theme(t){const chosen=t==='dark'?'dark':'light';document.documentElement.dataset.theme=chosen;const icon=chosen==='dark'?'☀️':'🌙';if($('theme'))$('theme').textContent=icon;if($('drawerThemeIcon'))$('drawerThemeIcon').textContent=icon;try{localStorage.setItem('theme',chosen)}catch(e){console.warn('Theme preference could not be stored',e)}}try{theme(localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'))}catch{}$('theme').onclick=()=>theme(document.documentElement.dataset.theme==='dark'?'light':'dark');function storeSettings(){try{return JSON.parse(localStorage.getItem('masaSettings')||'{}')}catch{return {}}}const uiWords={loginBtn:['المتابعة باستخدام جوجل','Continue with Google'],nameBtn:['حفظ','Save'],tHome:['الرئيسية','Home'],tSearch:['اكتشف','Discover'],tProfile:['ملفي','My profile'],tCommunity:['المجتمع','Community'],tSettings:['⚙️ الإعدادات','⚙️ Settings'],tAdmin:['🛡️ الإدارة','🛡️ Admin'],latestBtn:['آخر المنشورات','Latest posts'],postBtn:['نشر للمراجعة','Submit post'],imgBtn:['📷 صور (حتى 8)','📷 Images (up to 8)'],clearImages:['إزالة الصور','Remove images'],draftBtn:['💾 حفظ كمسودة','💾 Save draft'],restoreDraftBtn:['استعادة مسودة','Restore draft'],answerDaily:['إرسال الإجابة','Submit answer'],saveProfile:['حفظ التعديلات','Save profile'],removeAvatar:['إزالة الصورة الشخصية','Remove avatar'],removeCover:['إزالة الغلاف','Remove cover'],savePrivacy:['حفظ الخصوصية والرابط','Save privacy and link'],deleteAccountBtn:['حذف الحساب وبياناته','Delete account and data'],showFollowers:['أصدقائي','Friends'],showFollowing:['أصدقاؤهم','Friends'],showSuggestions:['أشخاص مقترحون','Suggested people'],showRequests:['طلبات الصداقة','Friend requests'],showBlocked:['المحظورون','Blocked users'],clearSearch:['مسح الفلاتر','Clear filters'],showSearchHistory:['🕘 عمليات البحث السابقة','🕘 Search history'],saveSettings:['حفظ الإعدادات','Save settings']};function applyLanguage(lang){const ix=lang==='en'?1:0;Object.entries(uiWords).forEach(([id,values])=>{const n=$(id);if(n){const target=n.querySelector('.nav-label');if(target)target.textContent=values[ix];else n.textContent=values[ix]}});const headings=[['#loginView h3','أهلًا بيك 👋','Welcome 👋'],['#nameView h3','اختار اسم العرض','Choose a display name'],['#homeView .section-title','أهلًا بيك في المجتمع الروحي 👋','Welcome to AlMogtama AlRouhi 👋'],['#homeView .card:nth-child(2) h3','اكتب سؤالًا أو مشاركة ✍️','Write a post ✍️'],['#dailyCard .section-title','💡 سؤال اليوم','💡 Daily question'],['#searchView h3','البحث عن الحسابات 🔎','Search accounts 🔎'],['#settingsProfileGroup #profileEditor h3','تعديل الملف الشخصي','Edit profile'],['#communityView h3','👥 الأصدقاء وطلبات الصداقة','👥 Friends and requests'],['#settingsView .settings-intro h2','⚙️ الإعدادات','⚙️ Settings'],['#adminView h3','🛡️ لوحة الإدارة','🛡️ Admin dashboard']];headings.forEach(([sel,ar,en])=>{const n=document.querySelector(sel);if(n)n.textContent=ix?en:ar});if($('postText'))$('postText').placeholder=ix?'What would you like to share?':'اكتب سؤالك الروحي أو تأملك أو طلب الصلاة...';if($('searchInput'))$('searchInput').placeholder=ix?'Search people...':'ابحث عن اسم العرض أو اسم المستخدم...';if($('profileBio'))$('profileBio').placeholder=ix?'Write a short bio...':'اكتب نبذة قصيرة عنك...';if($('dailyAnswer'))$('dailyAnswer').placeholder=ix?'Your answer (optional)':'إجابتك (اختياري)';}function applySettings(s=storeSettings()){const legacyPalette=['#6c5ce7','#0b8f87','#db4c86','#da7b13','#2876d2','#1d5145','#286b5c','#785c37','#3f6470','#496247','#17395f','#1d6a74','#8a3f4c','#8a6730','#31558a'];const palette=['#493653','#75607d','#8a3f4c','#8a6730','#31556b'];let accent=legacyPalette.includes(s.accent)?'#493653':(s.accent||'#493653');if(!palette.includes(accent))accent='#493653';document.documentElement.style.setProperty('--p',accent);document.documentElement.style.setProperty('--p2','#bf7e70');if(s.fontSize)document.documentElement.style.setProperty('--fs',s.fontSize);document.body.classList.toggle('reading',!!s.readingMode);document.documentElement.lang='ar';document.documentElement.dir='rtl';applyLanguage('ar');if($('accent'))$('accent').value=accent;if($('fontSize'))$('fontSize').value=s.fontSize||'16px';if($('readingMode'))$('readingMode').checked=!!s.readingMode;if($('language'))$('language').value='ar'}applySettings();$('connection').textContent=navigator.onLine?'● متصل':'● بدون إنترنت';window.addEventListener('online',()=>{$('connection').textContent='● متصل'});window.addEventListener('offline',()=>{$('connection').textContent='● بدون إنترنت'});
 async function beginGoogleAuth(){
  const button=$('loginBtn');
  if(!button||button.disabled)return;
  const originalHTML=button.innerHTML;
  const provider=new GoogleAuthProvider();
  provider.setCustomParameters({prompt:'select_account'});
- const redirectFallbackCodes=new Set([
-  'auth/popup-blocked',
-  'auth/operation-not-supported-in-this-environment',
-  'auth/web-storage-unsupported'
- ]);
- const renderAuthError=e=>{
-  console.error('[Google sign-in]',{code:e?.code||'unknown',message:e?.message||String(e)});
+ const standalone=window.matchMedia?.('(display-mode: standalone)').matches||window.navigator.standalone===true;
+ const redirectCodes=new Set(['auth/popup-blocked','auth/operation-not-supported-in-this-environment','auth/web-storage-unsupported','auth/cancelled-popup-request']);
+ const showAuthFailure=e=>{
+  console.error('[Google sign-in]',{code:e?.code||'unknown',message:e?.message||String(e),origin:location.origin});
   $('authMsg').textContent=authError(e,'google');
  };
- button.disabled=true;
- button.setAttribute('aria-busy','true');
- $('authMsg').textContent='جاري الاتصال بجوجل…';
+ button.disabled=true;button.setAttribute('aria-busy','true');$('authMsg').textContent='جاري الاتصال بجوجل…';
  try{
-  // Start with a user-initiated popup. Redirects can fail on GitHub Pages/Replit
-  // when the Firebase auth domain is treated as third-party storage.
-  await signInWithPopup(auth,provider);
-  $('authMsg').textContent='';
- }catch(popupError){
-  if(redirectFallbackCodes.has(popupError?.code)){
-   $('authMsg').textContent='المتصفح منع النافذة؛ جاري تجربة تسجيل الدخول بالتحويل…';
-   try{
-    await signInWithRedirect(auth,provider);
-    return; // The browser is leaving this page for Google's sign-in flow.
-   }catch(redirectError){
-    renderAuthError(redirectError);
-   }
-  }else{
-   renderAuthError(popupError);
+  // Installed PWAs should use a full-page redirect; it avoids popup restrictions on Android.
+  if(standalone){await signInWithRedirect(auth,provider);return;}
+  try{
+   await signInWithPopup(auth,provider);
+   $('authMsg').textContent='';
+  }catch(popupError){
+   if(!redirectCodes.has(popupError?.code))throw popupError;
+   $('authMsg').textContent='المتصفح منع نافذة الدخول؛ جاري فتح صفحة جوجل…';
+   await signInWithRedirect(auth,provider);
+   return;
   }
- }finally{
-  if(button.isConnected&&!auth.currentUser){
-   button.disabled=false;
-   button.removeAttribute('aria-busy');
-   button.innerHTML=originalHTML;
-  }
+ }catch(e){showAuthFailure(e);}
+ finally{
+  if(button.isConnected&&!auth.currentUser){button.disabled=false;button.removeAttribute('aria-busy');button.innerHTML=originalHTML;}
  }
 }
 function authError(e,method=''){
  const c=e?.code||'';
  const messages={
-  'auth/unauthorized-domain':'نطاق الموقع غير مسموح به في Firebase. افتح Authentication ← Settings ← Authorized domains وأضف نطاق الموقع الذي تفتح منه التطبيق.',
-  'auth/operation-not-allowed':'تسجيل الدخول بجوجل غير مفعّل في Firebase. افتح Authentication ← Sign-in method وفعّل Google ثم احفظ.',
-  'auth/invalid-api-key':'مفتاح Firebase غير صحيح. راجع firebaseConfig في إعدادات مشروع الويب.',
-  'auth/auth-domain-config-required':'إعداد authDomain ناقص أو غير صحيح في firebaseConfig.',
-  'auth/invalid-oauth-client-id':'إعداد عميل OAuth الخاص بجوجل غير صحيح. راجع إعداد Google داخل Firebase Authentication.',
-  'auth/popup-blocked':'المتصفح منع نافذة تسجيل الدخول. اسمح بالنوافذ المنبثقة أو افتح الموقع مباشرة في Chrome.',
-  'auth/popup-closed-by-user':'أُغلقت نافذة جوجل قبل إكمال الدخول. اضغط الزر وحاول مرة ثانية.',
-  'auth/network-request-failed':'تعذر الاتصال بخدمة جوجل/Firebase. تحقق من الاتصال بالإنترنت ثم أعد المحاولة.',
-  'auth/web-storage-unsupported':'المتصفح يمنع التخزين اللازم لتسجيل الدخول. افتح الموقع في Chrome العادي بدل المتصفح الداخلي.',
-  'auth/operation-not-supported-in-this-environment':'بيئة فتح التطبيق لا تدعم نافذة تسجيل الدخول. افتحه في Chrome وحاول مجددًا.',
-  'auth/cancelled-popup-request':'هناك محاولة دخول أخرى مفتوحة. أغلق نافذة جوجل ثم حاول مرة واحدة.',
-  'auth/too-many-requests':'محاولات كثيرة خلال وقت قصير. انتظر قليلًا ثم حاول مرة أخرى.',
-  'auth/account-exists-with-different-credential':'هذا البريد مسجل بطريقة دخول أخرى. استخدم طريقة الدخول المرتبطة به.',
+  'auth/unauthorized-domain':'نطاق الموقع غير مسموح به في Firebase. أضف هذا النطاق إلى Authentication ← Settings ← Authorized domains: '+location.hostname,
+  'auth/operation-not-allowed':method==='google'?'تسجيل الدخول بجوجل غير مفعّل في Firebase Authentication. فعّل Google من Authentication ← Sign-in method.':'تسجيل الدخول بالبريد الإلكتروني غير مفعّل في Firebase Authentication. فعّل Email/Password من Sign-in method.',
+  'auth/invalid-api-key':'مفتاح Firebase غير صحيح. تمت المحافظة على الإعداد الأصلي؛ تحقق من إعدادات تطبيق الويب داخل مشروع Firebase.',
+  'auth/auth-domain-config-required':'إعداد authDomain غير موجود أو غير صحيح في firebaseConfig.',
+  'auth/invalid-oauth-client-id':'إعداد OAuth الخاص بجوجل غير صحيح. راجع مزوّد Google داخل Firebase Authentication.',
+  'auth/popup-blocked':'المتصفح منع نافذة الدخول ولم يكتمل التحويل. افتح الموقع في Chrome واسمح بالنوافذ المنبثقة.',
+  'auth/popup-closed-by-user':'أُغلقت نافذة جوجل قبل إكمال الدخول. اضغط زر الدخول وحاول مرة أخرى.',
+  'auth/network-request-failed':'تعذر الاتصال بخدمة جوجل/Firebase. تحقق من الإنترنت ثم أعد المحاولة.',
+  'auth/web-storage-unsupported':'المتصفح يمنع التخزين اللازم لتسجيل الدخول. افتح التطبيق في Chrome العادي بدل نافذة داخل تطبيق آخر.',
+  'auth/operation-not-supported-in-this-environment':'بيئة فتح التطبيق لا تدعم نافذة الدخول. افتحه في Chrome وحاول مجددًا.',
+  'auth/cancelled-popup-request':'هناك محاولة دخول أخرى مفتوحة. أغلق نوافذ الدخول المفتوحة وحاول مرة واحدة.',
+  'auth/too-many-requests':'محاولات كثيرة خلال وقت قصير. انتظر قليلًا ثم أعد المحاولة.',
+  'auth/account-exists-with-different-credential':'هذا البريد مسجل بطريقة دخول أخرى. استخدم طريقة الدخول المرتبطة بالحساب.',
   'auth/credential-already-in-use':'بيانات جوجل مرتبطة بحساب آخر بالفعل.',
-  'auth/network-request-failed':'فشل الاتصال. تحقق من الإنترنت وحاول مجددًا.',
-  'auth/internal-error':'حدث خطأ داخلي من Firebase Authentication. رمز الخطأ أدناه يساعد في تحديد السبب.',
-  'auth/invalid-email':'صيغة البريد الإلكتروني غير صحيحة.',
-  'auth/user-not-found':'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
-  'auth/wrong-password':'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
-  'auth/invalid-credential':'بيانات الدخول غير صحيحة. راجع طريقة الدخول المرتبطة بالحساب.',
-  'auth/email-already-in-use':'هذا البريد مربوط بحساب آخر. ادخل بالحساب القديم أولًا أو اربط طريقة الدخول من الحساب.',
-  'auth/weak-password':'كلمة المرور لازم تكون 8 أحرف على الأقل.',
-  'auth/too-many-requests':'محاولات كثيرة. انتظر قليلًا وجرب مرة أخرى.'
+  'auth/internal-error':'حدث خطأ داخلي من Firebase Authentication. رمز الخطأ: auth/internal-error. تحقق من نطاق الموقع وإعدادات Google OAuth.',
+  'auth/invalid-credential':'تعذر اعتماد بيانات الدخول. تحقق من إعداد مزوّد Google وجرّب مرة أخرى.',
+  'auth/redirect-cancelled-by-user':'تم إلغاء تسجيل الدخول قبل اكتماله.',
+  'auth/redirect-operation-pending':'هناك عملية تسجيل دخول قيد التنفيذ. انتظر عودة صفحة جوجل ثم حاول مرة أخرى.'
  };
- const msg=messages[c]||('تعذر إكمال تسجيل الدخول. رمز الخطأ: '+(c||'غير متاح')+'. افتح الموقع في Chrome وحاول مجددًا.');
- return c?msg+'\nرمز التشخيص: '+c:msg;
+ if(messages[c])return messages[c];
+ if(c==='auth/invalid-email')return 'صيغة البريد الإلكتروني غير صحيحة.';
+ if(['auth/user-not-found','auth/wrong-password','auth/invalid-credential'].includes(c))return 'البريد الإلكتروني أو كلمة المرور غير صحيحة.';
+ if(c==='auth/email-already-in-use')return 'هذا البريد مرتبط بحساب موجود. سجّل الدخول بالطريقة القديمة أولًا.';
+ if(c==='auth/weak-password')return 'كلمة المرور لازم تكون 8 أحرف على الأقل.';
+ return 'تعذر إكمال تسجيل الدخول ('+(c||'خطأ غير معروف')+'). تحقق من الاتصال وإعدادات Firebase ثم أعد المحاولة.';
 }
 $('loginBtn').onclick=beginGoogleAuth;
 // Surface redirect-flow errors after returning from Google's sign-in page.
