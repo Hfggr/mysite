@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'almojtama-alrouhi-pwa-';
-const CACHE_NAME = `${CACHE_PREFIX}v21`;
+const CACHE_NAME = `${CACHE_PREFIX}v22`;
 const APP_SHELL = ['./index.html', './manifest.webmanifest', './brand.svg', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', event => {
